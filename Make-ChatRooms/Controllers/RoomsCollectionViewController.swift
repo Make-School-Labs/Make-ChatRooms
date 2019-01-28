@@ -16,9 +16,10 @@ class RoomsCollectionViewController: UICollectionViewController, UICollectionVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        collectionView?.backgroundColor = UIColor.white
         layoutCells()
+        collectionView?.backgroundColor = UIColor.white
+        collectionView?.alwaysBounceVertical = true
+        self.navigationItem.title = "Active Rooms"
         
         collectionView?.register(RoomsCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
     }

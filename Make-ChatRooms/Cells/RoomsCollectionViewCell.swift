@@ -12,6 +12,14 @@ import UIKit
 class RoomsCollectionViewCell: UICollectionViewCell {
     // Represents our Room Collection View Cell
     
+    let roomName: UITextField = {
+        let roomNameTextField = UITextField()
+        roomNameTextField.text =  "Test Room"
+        
+        return roomNameTextField
+    }() // Invoke operation to instantiate uitext field
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureViews()
@@ -24,6 +32,10 @@ class RoomsCollectionViewCell: UICollectionViewCell {
     
     func configureViews() {
         print("Being configured")
-        backgroundColor = UIColor.red
+        self.backgroundColor = UIColor.blue
+        self.contentView.addSubview(roomName)
+        roomName.frame = self.contentView.bounds
+        //addSubview(roomName)
+        
     }
 }
