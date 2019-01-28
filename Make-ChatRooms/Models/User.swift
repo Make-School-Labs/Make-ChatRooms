@@ -11,8 +11,10 @@ import Foundation
 
 class User: NSObject {
     var username: String
+    var activeRooms: [Room] = [Room]()
     
-     init(username: String) {
+    init(username: String, activeRooms: [Room]) {
         self.username = username
+        self.activeRooms = activeRooms
     }
 }

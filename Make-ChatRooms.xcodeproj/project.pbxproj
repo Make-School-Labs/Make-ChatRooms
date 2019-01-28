@@ -17,6 +17,7 @@
 		1C2FC05121FF942E00288F07 /* RoomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05021FF942E00288F07 /* RoomsTableViewCell.swift */; };
 		1C2FC05321FFB5F700288F07 /* ChatLogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05221FFB5F700288F07 /* ChatLogCollectionViewController.swift */; };
 		1C2FC05621FFBE3800288F07 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05521FFBE3800288F07 /* User.swift */; };
+		1C2FC05821FFBF1700288F07 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05721FFBF1700288F07 /* Room.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		1C2FC05021FF942E00288F07 /* RoomsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableViewCell.swift; sourceTree = "<group>"; };
 		1C2FC05221FFB5F700288F07 /* ChatLogCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogCollectionViewController.swift; sourceTree = "<group>"; };
 		1C2FC05521FFBE3800288F07 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1C2FC05721FFBF1700288F07 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				1C2FC05521FFBE3800288F07 /* User.swift */,
+				1C2FC05721FFBF1700288F07 /* Room.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			files = (
 				1C2FC05321FFB5F700288F07 /* ChatLogCollectionViewController.swift in Sources */,
 				1C2FC02E21FF902500288F07 /* RoomsCollectionViewController.swift in Sources */,
+				1C2FC05821FFBF1700288F07 /* Room.swift in Sources */,
 				1C2FC05621FFBE3800288F07 /* User.swift in Sources */,
 				1C2FC02C21FF902500288F07 /* AppDelegate.swift in Sources */,
 				1C2FC03421FF902500288F07 /* Make_ChatRooms.xcdatamodeld in Sources */,
