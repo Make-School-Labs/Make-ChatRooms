@@ -19,11 +19,12 @@ class CreateUserViewController: UIViewController {
     }()
     
     let joinButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
         
         // MARK TODO: Add string interpolation to say the username when user joins the chat
-        button.titleLabel?.text = "Join Chat"
-        button.backgroundColor = UIColor.red
+        button.backgroundColor = UIColor.blue
+        button.setTitle("Join Chat", for: .normal)
+        button.addTarget(self, action: #selector(joinChat), for: .touchUpInside)
         return button
     }()
     
@@ -33,5 +34,9 @@ class CreateUserViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.view.addSubview(usernameText)
         self.view.addSubview(joinButton)
+    }
+    
+    @objc func joinChat(sender: UIButton) {
+        print("Pressing join chat button")
     }
 }
