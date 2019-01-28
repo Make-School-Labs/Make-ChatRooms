@@ -47,7 +47,9 @@ class RoomsTableViewController: UITableViewController {
         let layout = UICollectionViewLayout()
         print("Room being selected")
         let chatLogCollectionVC = ChatLogCollectionViewController(collectionViewLayout: layout)
-        guard let currentRoomName = self.tableView.cellForRow(at: indexPath)?.textLabel?.text else {return}
+        
+        // MARK: TODO Make the current room name dynamic
+        let currentRoomName = "Test Room"
         
         chatLogCollectionVC.roomName = currentRoomName
         self.navigationController?.pushViewController(chatLogCollectionVC, animated: true)
