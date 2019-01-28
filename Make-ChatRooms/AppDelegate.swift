@@ -23,8 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let roomsViewController = RoomsTableViewController(style: .plain)
+        let createUserVC = CreateUserViewController()
         
-        window?.rootViewController = UINavigationController(rootViewController: roomsViewController)
+        window?.rootViewController = UINavigationController(rootViewController: createUserVC)
         return true
     }
 
