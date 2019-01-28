@@ -34,8 +34,6 @@ class CreateUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let width = "Hello"
-        print("Instantiating view")
         self.view.backgroundColor = UIColor.white
         self.view.addSubview(usernameText)
         self.view.addSubview(joinButton)
@@ -44,6 +42,7 @@ class CreateUserViewController: UIViewController {
     @objc func joinChat(sender: UIButton) {
         guard let username = usernameText.text else {return}
         let user = User(username: username, activeRooms: nil)
-        print(user.username)
+        let roomsTableVC = RoomsTableViewController()
+        self.navigationController?.pushViewController(roomsTableVC, animated: true)
     }
 }
