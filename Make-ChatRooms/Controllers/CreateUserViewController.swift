@@ -14,7 +14,11 @@ class CreateUserViewController: UIViewController {
     // What is the purpose of this screen? Here we are going to get the username that the user is going throughout the lifetime of the application we then use this value to denote the current user
     
     let usernameText: UITextField = {
-        let textField = UITextField()
+        let width = UIScreen.main.bounds.width
+        let height = UIScreen.main.bounds.height
+        
+        let textField = UITextField(frame: CGRect(x: width / 2 , y: height / 2, width: 150, height: 50))
+        textField.backgroundColor = UIColor.gray
         return textField
     }()
     
@@ -30,6 +34,7 @@ class CreateUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let width = "Hello"
         print("Instantiating view")
         self.view.backgroundColor = UIColor.white
         self.view.addSubview(usernameText)
@@ -37,6 +42,8 @@ class CreateUserViewController: UIViewController {
     }
     
     @objc func joinChat(sender: UIButton) {
-        print("Pressing join chat button")
+        guard let username = usernameText.text else {return}
+        let user = User(username: username, activeRooms: nil)
+        print(user.username)
     }
 }
