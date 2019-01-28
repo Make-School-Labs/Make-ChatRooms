@@ -14,7 +14,8 @@
 		1C2FC03621FF902500288F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2FC03521FF902500288F07 /* Assets.xcassets */; };
 		1C2FC03921FF902500288F07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2FC03721FF902500288F07 /* LaunchScreen.storyboard */; };
 		1C2FC04421FF902600288F07 /* Make_ChatRoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC04321FF902600288F07 /* Make_ChatRoomsTests.swift */; };
-		1C2FC05121FF942E00288F07 /* RoomsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05021FF942E00288F07 /* RoomsCollectionViewCell.swift */; };
+		1C2FC05121FF942E00288F07 /* RoomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05021FF942E00288F07 /* RoomsTableViewCell.swift */; };
+		1C2FC05321FFB5F700288F07 /* ChatLogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05221FFB5F700288F07 /* ChatLogCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,8 @@
 		1C2FC03F21FF902600288F07 /* Make-ChatRoomsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Make-ChatRoomsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2FC04321FF902600288F07 /* Make_ChatRoomsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Make_ChatRoomsTests.swift; sourceTree = "<group>"; };
 		1C2FC04521FF902600288F07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C2FC05021FF942E00288F07 /* RoomsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsCollectionViewCell.swift; sourceTree = "<group>"; };
+		1C2FC05021FF942E00288F07 /* RoomsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableViewCell.swift; sourceTree = "<group>"; };
+		1C2FC05221FFB5F700288F07 /* ChatLogCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				1C2FC02D21FF902500288F07 /* RoomsCollectionViewController.swift */,
+				1C2FC05221FFB5F700288F07 /* ChatLogCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,7 +116,7 @@
 		1C2FC04F21FF941400288F07 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				1C2FC05021FF942E00288F07 /* RoomsCollectionViewCell.swift */,
+				1C2FC05021FF942E00288F07 /* RoomsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -221,10 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2FC05321FFB5F700288F07 /* ChatLogCollectionViewController.swift in Sources */,
 				1C2FC02E21FF902500288F07 /* RoomsCollectionViewController.swift in Sources */,
 				1C2FC02C21FF902500288F07 /* AppDelegate.swift in Sources */,
 				1C2FC03421FF902500288F07 /* Make_ChatRooms.xcdatamodeld in Sources */,
-				1C2FC05121FF942E00288F07 /* RoomsCollectionViewCell.swift in Sources */,
+				1C2FC05121FF942E00288F07 /* RoomsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let layout = UICollectionViewLayout()
-        let roomsViewController = RoomsCollectionViewController(collectionViewLayout: layout)
+        
+        let roomsViewController = RoomsTableViewController(style: .plain)
         
         window?.rootViewController = UINavigationController(rootViewController: roomsViewController)
         return true

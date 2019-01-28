@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoomsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class RoomsTableViewController: UITableViewController {
     
     let cellIdentifier = "cellIdentifier"
     
@@ -16,17 +16,16 @@ class RoomsCollectionViewController: UICollectionViewController, UICollectionVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        layoutCells()
-        collectionView?.backgroundColor = UIColor.white
-        collectionView?.alwaysBounceVertical = true
+        tableView?.backgroundColor = UIColor.white
+        tableView?.alwaysBounceVertical = true
         self.navigationItem.title = "Active Rooms"
         
-        collectionView?.register(RoomsCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        tableView.register(RoomsTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.collectionView?.frame = self.view.bounds
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,22 +33,24 @@ class RoomsCollectionViewController: UICollectionViewController, UICollectionVie
         // Dispose of any resources that can be recreated.
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        return cell
     }
     
-    func layoutCells() {
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
-        layout.minimumInteritemSpacing = 5.0
-        layout.minimumLineSpacing = 5.0
-        layout.itemSize = CGSize(width: self.view.frame.width, height: CGFloat(100))
-        collectionView!.collectionViewLayout = layout
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let layout = UICollectionViewLayout()
+        print("Room being selected")
+        let chatLogCollectionVC = ChatLogCollectionViewController(collectionViewLayout: layout)
+        guard let currentRoomName = self.tableView.cellForRow(at: indexPath)?.textLabel?.text else {return}
+        
+        chatLogCollectionVC.roomName = currentRoomName
+        self.navigationController?.pushViewController(chatLogCollectionVC, animated: true)
     }
 }
 

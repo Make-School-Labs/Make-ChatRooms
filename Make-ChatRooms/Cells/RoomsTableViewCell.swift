@@ -9,22 +9,22 @@
 import Foundation
 import UIKit
 
-class RoomsCollectionViewCell: UITableViewCell {
+class RoomsTableViewCell: UITableViewCell {
     // Represents our Room Collection View Cell
     
-    let roomName: UITextField = {
-        let roomNameTextField = UITextField()
-        roomNameTextField.text =  "Test Room"
+    let roomName: UILabel = {
+        let roomNameLabel = UILabel()
+        roomNameLabel.text =  "Test Room"
         
-        return roomNameTextField
+        return roomNameLabel
     }() // Invoke operation to instantiate uitext field
     
-    let dividerLineView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.blue
-        
-        return view
+    let recentMessageLabel: UILabel  = {
+        let messageLabel = UILabel()
+        messageLabel.text = "Test Recent Message Sent"
+        return messageLabel
     }()
+    
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -39,14 +39,12 @@ class RoomsCollectionViewCell: UITableViewCell {
     func configureViews() {
         print("Being configured")
         self.contentView.addSubview(roomName)
-        self.contentView.addSubview(dividerLineView)
-//        dividerLineView.translatesAutoresizingMaskIntoConstraints = false
         
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-82-[v0]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dividerLineView]))
-        
-        
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(1)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dividerLineView]))
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-82-[v0]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dividerLineView]))
+//
+//
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(1)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dividerLineView]))
         
         roomName.frame = self.contentView.bounds
         //addSubview(roomName)
