@@ -34,6 +34,7 @@ class RoomsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // MARK: TODO REPRESENTING THE NUMBER OF ACTIVE ROOMS THAT THE USER IS IN
         return 3
     }
     
@@ -48,7 +49,7 @@ class RoomsTableViewController: UITableViewController {
         print("Room being selected")
         let chatLogCollectionVC = ChatLogCollectionViewController(collectionViewLayout: layout)
         
-        // MARK: TODO Make the current room name dynamic
+        // MARK: TODO THE ACTUAL ROOM THAT THE USER TAPS ON
         let currentRoomName = "Test Room"
         
         chatLogCollectionVC.roomName = currentRoomName
