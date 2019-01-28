@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RoomsCollectionViewCell: UICollectionViewCell {
+class RoomsCollectionViewCell: UITableViewCell {
     // Represents our Room Collection View Cell
     
     let roomName: UITextField = {
@@ -19,9 +19,15 @@ class RoomsCollectionViewCell: UICollectionViewCell {
         return roomNameTextField
     }() // Invoke operation to instantiate uitext field
     
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    let dividerLineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.blue
+        
+        return view
+    }()
+
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         configureViews()
     }
     
@@ -32,8 +38,16 @@ class RoomsCollectionViewCell: UICollectionViewCell {
     
     func configureViews() {
         print("Being configured")
-        self.backgroundColor = UIColor.blue
         self.contentView.addSubview(roomName)
+        self.contentView.addSubview(dividerLineView)
+//        dividerLineView.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-82-[v0]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dividerLineView]))
+        
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(1)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dividerLineView]))
+        
         roomName.frame = self.contentView.bounds
         //addSubview(roomName)
         
