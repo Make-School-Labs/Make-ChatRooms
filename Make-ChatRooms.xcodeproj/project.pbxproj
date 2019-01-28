@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C2FC02C21FF902500288F07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC02B21FF902500288F07 /* AppDelegate.swift */; };
-		1C2FC02E21FF902500288F07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC02D21FF902500288F07 /* ViewController.swift */; };
+		1C2FC02E21FF902500288F07 /* RoomsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC02D21FF902500288F07 /* RoomsCollectionViewController.swift */; };
 		1C2FC03121FF902500288F07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2FC02F21FF902500288F07 /* Main.storyboard */; };
 		1C2FC03421FF902500288F07 /* Make_ChatRooms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC03221FF902500288F07 /* Make_ChatRooms.xcdatamodeld */; };
 		1C2FC03621FF902500288F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2FC03521FF902500288F07 /* Assets.xcassets */; };
@@ -29,7 +29,7 @@
 /* Begin PBXFileReference section */
 		1C2FC02821FF902500288F07 /* Make-ChatRooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make-ChatRooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2FC02B21FF902500288F07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C2FC02D21FF902500288F07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C2FC02D21FF902500288F07 /* RoomsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsCollectionViewController.swift; sourceTree = "<group>"; };
 		1C2FC03021FF902500288F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C2FC03321FF902500288F07 /* Make_ChatRooms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Make_ChatRooms.xcdatamodel; sourceTree = "<group>"; };
 		1C2FC03521FF902500288F07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,8 +79,8 @@
 		1C2FC02A21FF902500288F07 /* Make-ChatRooms */ = {
 			isa = PBXGroup;
 			children = (
+				1C2FC04E21FF927500288F07 /* Controllers */,
 				1C2FC02B21FF902500288F07 /* AppDelegate.swift */,
-				1C2FC02D21FF902500288F07 /* ViewController.swift */,
 				1C2FC02F21FF902500288F07 /* Main.storyboard */,
 				1C2FC03521FF902500288F07 /* Assets.xcassets */,
 				1C2FC03721FF902500288F07 /* LaunchScreen.storyboard */,
@@ -97,6 +97,14 @@
 				1C2FC04521FF902600288F07 /* Info.plist */,
 			);
 			path = "Make-ChatRoomsTests";
+			sourceTree = "<group>";
+		};
+		1C2FC04E21FF927500288F07 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C2FC02D21FF902500288F07 /* RoomsCollectionViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C2FC02E21FF902500288F07 /* ViewController.swift in Sources */,
+				1C2FC02E21FF902500288F07 /* RoomsCollectionViewController.swift in Sources */,
 				1C2FC02C21FF902500288F07 /* AppDelegate.swift in Sources */,
 				1C2FC03421FF902500288F07 /* Make_ChatRooms.xcdatamodeld in Sources */,
 			);
