@@ -19,6 +19,6 @@ class ChatLogCollectionViewController: UICollectionViewController, UICollectionV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.collectionView?.backgroundColor = UIColor.white
     }
 }
