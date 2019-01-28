@@ -8,15 +8,24 @@
 
 import UIKit
 
-class RoomsCollectionViewController: UICollectionViewController {
+class RoomsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    private let cellIdentifier = "cellIdentifier"
+    let cellIdentifier = "cellIdentifier"
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        collectionView?.register(RoomsCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
+//        self.collectionView?.delegate = self
+        collectionView?.backgroundColor = UIColor.blue
+        
+        
+       collectionView?.register(RoomsCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.collectionView?.frame = self.view.bounds
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +38,16 @@ class RoomsCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         return collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
+    }
+    
+    // Delegate function from layout protocol
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        // To format the collection view cell layout
+        
+        return CGSize(width: self.view.frame.width, height: CGFloat(100))
     }
 }
 

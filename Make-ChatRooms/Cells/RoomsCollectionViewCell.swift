@@ -10,18 +10,20 @@ import Foundation
 import UIKit
 
 class RoomsCollectionViewCell: UICollectionViewCell {
-    // Represents our Room Cell
+    // Represents our Room Collection View Cell
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureViews()
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("required intializer has not been implemented")
     }
     
     func configureViews() {
-        backgroundColor = UIColor.blue
+        print("Being configured")
+        backgroundColor = UIColor.red
     }
 }
