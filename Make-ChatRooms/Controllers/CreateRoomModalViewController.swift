@@ -11,6 +11,8 @@ import UIKit
 
 class CreateRoomModalViewController: UIViewController {
     
+    var delegate: UserDelegate?
+    
     let roomName:UITextField = {
         let textField = UITextField(frame: CGRect(x: 20, y: 50, width: 300, height: 40))
         textField.placeholder = "Enter Room Name"
