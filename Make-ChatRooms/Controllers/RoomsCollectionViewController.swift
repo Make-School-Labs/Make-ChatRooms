@@ -12,6 +12,11 @@ class RoomsTableViewController: UITableViewController {
     
     let cellIdentifier = "cellIdentifier"
     
+    let createRoomButton: UIBarButtonItem = {
+        let createJoinRoomButton = UIBarButtonItem(title: "Create Room", style: .plain, target: self, action: #selector(createRoom))
+        return createJoinRoomButton
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +24,7 @@ class RoomsTableViewController: UITableViewController {
         tableView?.backgroundColor = UIColor.white
         tableView?.alwaysBounceVertical = true
         self.navigationItem.title = "Active Rooms"
+        self.navigationItem.rightBarButtonItem = createRoomButton
         
         tableView.register(RoomsTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
@@ -54,6 +60,10 @@ class RoomsTableViewController: UITableViewController {
         
         chatLogCollectionVC.roomName = currentRoomName
         self.navigationController?.pushViewController(chatLogCollectionVC, animated: true)
+    }
+    
+    @objc func createRoom() {
+        print("Create room action being triggered")
     }
 }
 

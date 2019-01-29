@@ -41,7 +41,9 @@ class CreateUserViewController: UIViewController {
     
     @objc func joinChat(sender: UIButton) {
         guard let username = usernameText.text else {return}
-        let user = User(username: username, activeRooms: nil)
+        
+        // MARK TODO: Carry (anonymous user object) through delegate to next screen
+        _ = User(username: username, activeRooms: nil)
         let roomsTableVC = RoomsTableViewController()
         self.navigationController?.pushViewController(roomsTableVC, animated: true)
     }
