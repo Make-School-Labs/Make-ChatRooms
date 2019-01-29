@@ -54,8 +54,10 @@ class ChatRoom: NSObject {
         self.socket.emit("chat message", "Part Deux!") // Make the messages dynamic in this portion
     }
     
-    func joinRoom(roomName: String) {
-        self.socket.emit("joinRoom", roomName) // Join pre-exisiting chat room with given name being sent to server
+    func joinRoom() {
+        guard let room = self.room else {return}
+        self.socket.emit("joinRoom", room.roomName) // Join pre-exisiting chat room with given name being sent to server
+        self.user?.activeRooms?.append(room)
     }
     
     func createRoom(roomName: String) {

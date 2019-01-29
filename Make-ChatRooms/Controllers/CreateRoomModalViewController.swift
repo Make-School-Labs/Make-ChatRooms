@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class CreateRoomModalViewController: UIViewController {
-    
+    let chatRoom = ChatRoom()
     
     lazy var roomName:UITextField = {
         let textField = UITextField(frame: CGRect(x: 20, y: 50, width: 300, height: 40))
@@ -46,6 +46,8 @@ class CreateRoomModalViewController: UIViewController {
         guard let roomName = roomName.text else {return}
         print("Name of the room user has chosen \(roomName)")
         var room = Room(roomName: roomName)
+        chatRoom.room = room
+        chatRoom.joinRoom()
     }
     
     func showAnimate() {
