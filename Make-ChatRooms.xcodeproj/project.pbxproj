@@ -20,6 +20,7 @@
 		1C2FC05821FFBF1700288F07 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05721FFBF1700288F07 /* Room.swift */; };
 		1C2FC05A21FFC01000288F07 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05921FFC01000288F07 /* CreateUserViewController.swift */; };
 		1C2FC05C21FFD53500288F07 /* CreateRoomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05B21FFD53500288F07 /* CreateRoomModalViewController.swift */; };
+		1C2FC05F2200255100288F07 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05E2200255100288F07 /* ChatRoom.swift */; };
 		C3F83443A195BC903171C345 /* Pods_Make_ChatRooms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E1FC4B11C1F82A86400F7E /* Pods_Make_ChatRooms.framework */; };
 		EE82D7104CB812E87E00F4FC /* Pods_Make_ChatRoomsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A8027F70DC5A2734B71778 /* Pods_Make_ChatRoomsTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		1C2FC05721FFBF1700288F07 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		1C2FC05921FFC01000288F07 /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		1C2FC05B21FFD53500288F07 /* CreateRoomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModalViewController.swift; sourceTree = "<group>"; };
+		1C2FC05E2200255100288F07 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		1F6134BB8C62555AB4937947 /* Pods-Make-ChatRoomsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Make-ChatRoomsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Make-ChatRoomsTests/Pods-Make-ChatRoomsTests.release.xcconfig"; sourceTree = "<group>"; };
 		63C79135CED5D6560B4E26E1 /* Pods-Make-ChatRooms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Make-ChatRooms.release.xcconfig"; path = "Pods/Target Support Files/Pods-Make-ChatRooms/Pods-Make-ChatRooms.release.xcconfig"; sourceTree = "<group>"; };
 		6DC20D1112AAE55001D3F007 /* Pods-Make-ChatRooms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Make-ChatRooms.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Make-ChatRooms/Pods-Make-ChatRooms.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		1C2FC02A21FF902500288F07 /* Make-ChatRooms */ = {
 			isa = PBXGroup;
 			children = (
+				1C2FC05D2200253D00288F07 /* ChatRoom */,
 				1C2FC05421FFBE2B00288F07 /* Models */,
 				1C2FC04F21FF941400288F07 /* Cells */,
 				1C2FC04E21FF927500288F07 /* Controllers */,
@@ -151,6 +154,14 @@
 				1C2FC05721FFBF1700288F07 /* Room.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1C2FC05D2200253D00288F07 /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				1C2FC05E2200255100288F07 /* ChatRoom.swift */,
+			);
+			path = ChatRoom;
 			sourceTree = "<group>";
 		};
 		2E911456E07E31B78ADC82D6 /* Pods */ = {
@@ -319,9 +330,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Make-ChatRooms/Pods-Make-ChatRooms-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -394,6 +410,7 @@
 				1C2FC02C21FF902500288F07 /* AppDelegate.swift in Sources */,
 				1C2FC03421FF902500288F07 /* Make_ChatRooms.xcdatamodeld in Sources */,
 				1C2FC05121FF942E00288F07 /* RoomsTableViewCell.swift in Sources */,
+				1C2FC05F2200255100288F07 /* ChatRoom.swift in Sources */,
 				1C2FC05C21FFD53500288F07 /* CreateRoomModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

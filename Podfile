@@ -6,6 +6,7 @@ target 'Make-ChatRooms' do
   use_frameworks!
 
   # Pods for Make-ChatRooms
+  pod 'Socket.IO-Client-Swift'
 
   target 'Make-ChatRoomsTests' do
     inherit! :search_paths

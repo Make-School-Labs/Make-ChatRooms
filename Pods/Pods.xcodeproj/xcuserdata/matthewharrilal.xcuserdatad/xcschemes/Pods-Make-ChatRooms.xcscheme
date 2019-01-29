@@ -7,30 +7,33 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForAnalyzing = "YES"
             buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
-            buildForArchiving = "YES">
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C46FCEA4039DE34EEF58D666589330B2'
-               BlueprintName = 'Pods-Make-ChatRooms'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-Make-ChatRooms.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "05B95E265B13627A83D771B422C5C9F8"
+               BuildableName = "Pods_Make_ChatRooms.framework"
+               BlueprintName = "Pods-Make-ChatRooms"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -38,17 +41,25 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      buildConfiguration = "Debug"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "05B95E265B13627A83D771B422C5C9F8"
+            BuildableName = "Pods_Make_ChatRooms.framework"
+            BlueprintName = "Pods-Make-ChatRooms"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES"
-      buildConfiguration = "Release"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      debugDocumentVersioning = "YES">
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
