@@ -11,3 +11,7 @@ import Foundation
 protocol UserDelegate {
     func sendSocketNickname(user: User)
 }
+
+protocol RoomDelegate {
+    func sendRoomName(room: Room)
+}
