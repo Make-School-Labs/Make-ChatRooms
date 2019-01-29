@@ -13,6 +13,8 @@ import UIKit
 class CreateUserViewController: UIViewController {
     // What is the purpose of this screen? Here we are going to get the username that the user is going throughout the lifetime of the application we then use this value to denote the current user
     
+    var delegate: UserDelegate?
+    
     let usernameText: UITextField = {
         let width = UIScreen.main.bounds.width
         let height = UIScreen.main.bounds.height
@@ -42,8 +44,8 @@ class CreateUserViewController: UIViewController {
     @objc func joinChat(sender: UIButton) {
         guard let username = usernameText.text else {return}
         
-        // MARK TODO: Carry (anonymous user object) through delegate to next screen
-        _ = User(username: username, activeRooms: nil)
+        let user = User(username: username, activeRooms: nil)
+        self.delegate?.sendSocketNickname(user: user)
         let roomsTableVC = RoomsTableViewController()
         self.navigationController?.pushViewController(roomsTableVC, animated: true)
     }
