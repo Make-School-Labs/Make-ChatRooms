@@ -19,6 +19,7 @@
 		1C2FC05621FFBE3800288F07 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05521FFBE3800288F07 /* User.swift */; };
 		1C2FC05821FFBF1700288F07 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05721FFBF1700288F07 /* Room.swift */; };
 		1C2FC05A21FFC01000288F07 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05921FFC01000288F07 /* CreateUserViewController.swift */; };
+		1C2FC05C21FFD53500288F07 /* CreateRoomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05B21FFD53500288F07 /* CreateRoomModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		1C2FC05521FFBE3800288F07 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1C2FC05721FFBF1700288F07 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		1C2FC05921FFC01000288F07 /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		1C2FC05B21FFD53500288F07 /* CreateRoomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				1C2FC02D21FF902500288F07 /* RoomsCollectionViewController.swift */,
 				1C2FC05221FFB5F700288F07 /* ChatLogCollectionViewController.swift */,
 				1C2FC05921FFC01000288F07 /* CreateUserViewController.swift */,
+				1C2FC05B21FFD53500288F07 /* CreateRoomModalViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				1C2FC02C21FF902500288F07 /* AppDelegate.swift in Sources */,
 				1C2FC03421FF902500288F07 /* Make_ChatRooms.xcdatamodeld in Sources */,
 				1C2FC05121FF942E00288F07 /* RoomsTableViewCell.swift in Sources */,
+				1C2FC05C21FFD53500288F07 /* CreateRoomModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

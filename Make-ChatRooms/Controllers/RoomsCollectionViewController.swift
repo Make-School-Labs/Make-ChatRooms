@@ -12,6 +12,8 @@ class RoomsTableViewController: UITableViewController {
     
     let cellIdentifier = "cellIdentifier"
     
+    
+    // MARK TODO: Can these uielements be extracted to a helper file?
     let createRoomButton: UIBarButtonItem = {
         let createJoinRoomButton = UIBarButtonItem(title: "Create Room", style: .plain, target: self, action: #selector(createRoom))
         return createJoinRoomButton
