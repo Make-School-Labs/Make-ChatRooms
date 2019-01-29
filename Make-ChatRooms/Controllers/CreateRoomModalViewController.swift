@@ -11,11 +11,25 @@ import UIKit
 
 class CreateRoomModalViewController: UIViewController {
     
+    let roomName:UITextField = {
+        let textField = UITextField(frame: CGRect(x: 20, y: 100, width: 300, height: 40))
+        textField.placeholder = "Enter Room Name"
+        return textField
+    }()
+    
+    let joinButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 50, y: 50, width: 50, height: 50))
+        button.backgroundColor = UIColor.red
+        button.titleLabel?.text = "Join Room"
+        return button
+    }()
+    
     lazy var modalView: UIView = {
-        let width = self.view.frame.width
-        let height = self.view.frame.height
         let modalView = UIView(frame: CGRect(x: 70, y: 278, width: 300, height: 170))
-        modalView.backgroundColor = UIColor.gray
+        modalView.backgroundColor = UIColor.blue
+        modalView.addSubview(self.roomName)
+        modalView.addSubview(self.joinButton)
+        
         return modalView
     }()
     
