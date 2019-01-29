@@ -13,16 +13,17 @@ class CreateRoomModalViewController: UIViewController {
     
     var delegate: UserDelegate?
     
-    let roomName:UITextField = {
+    lazy var roomName:UITextField = {
         let textField = UITextField(frame: CGRect(x: 20, y: 50, width: 300, height: 40))
         textField.placeholder = "Enter Room Name"
         return textField
     }()
     
-    let joinButton: UIButton = {
+    lazy var joinButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 50, y: 100, width: 100, height: 50))
         button.titleLabel?.text = "Join Room"
         button.backgroundColor = UIColor.darkText
+        button.addTarget(self, action: #selector(joinRoom), for: .touchUpInside)
         return button
     }()
     
@@ -42,6 +43,10 @@ class CreateRoomModalViewController: UIViewController {
         showAnimate()
     }
     
+    @objc func joinRoom(sender: UIButton) {
+        guard let roomName = roomName.text else {return}
+        print("Name of the room user has chosen \(roomName)")
+    }
     
     func showAnimate() {
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
