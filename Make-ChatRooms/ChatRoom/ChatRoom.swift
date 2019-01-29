@@ -36,7 +36,9 @@ class ChatRoom: NSObject {
         }
     }
     
-    
+    func sendNickname(username: String) {
+        self.socket.emit("socketUsername", username)
+    }
     
     
     func sendMessage() { // Has to conect first so triggering message isn't the first thing that occurs
