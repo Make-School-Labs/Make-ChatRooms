@@ -13,6 +13,7 @@ import UIKit
 class CreateUserViewController: UIViewController {
     // What is the purpose of this screen? Here we are going to get the username that the user is going throughout the lifetime of the application we then use this value to denote the current user
     
+    let chatRoom = ChatRoom()
     
     let usernameText: UITextField = {
         let width = UIScreen.main.bounds.width
@@ -44,8 +45,8 @@ class CreateUserViewController: UIViewController {
         guard let username = usernameText.text else {return}
         
         let user = User(username: username, activeRooms: nil)
-        let chatRoom = ChatRoom()
         chatRoom.user = user
+        chatRoom.sendNickname()
         let roomsTableVC = RoomsTableViewController()
         self.navigationController?.pushViewController(roomsTableVC, animated: true)
     }

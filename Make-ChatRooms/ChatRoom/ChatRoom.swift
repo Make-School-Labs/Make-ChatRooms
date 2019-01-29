@@ -11,6 +11,7 @@ import SocketIO
 
 class ChatRoom: NSObject {
     var user: User?
+    var room: Room?
     
 //    func sendSocketNickname(user: User) {
 //        print("USER SENT THROUGH DELEGATE \(user)")
@@ -43,7 +44,7 @@ class ChatRoom: NSObject {
         }
     }
     
-    func sendNickname(username: String) {
+    func sendNickname() {
         guard let username = self.user?.username else {return}
         self.socket.emit("socketUsername", username)
     }
