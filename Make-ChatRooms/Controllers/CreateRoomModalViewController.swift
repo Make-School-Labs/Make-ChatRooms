@@ -23,7 +23,7 @@ class CreateRoomModalViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.clear
         self.view.addSubview(modalView)
-//        showAnimate()
+        showAnimate()
     }
     
     

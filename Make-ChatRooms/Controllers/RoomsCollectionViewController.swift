@@ -75,9 +75,13 @@ class RoomsTableViewController: UITableViewController {
     
     func showModalView() {
         let modalViewController = CreateRoomModalViewController()
-        
+//        self.view.backgroundColor = UIColor.gray
         modalViewController.modalPresentationStyle = .overCurrentContext
         
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.frame = self.view.bounds
+        self.view.addSubview(blurView)
         self.present(modalViewController, animated: true) {
             print("PRESENTED MODAL VIEW")
         }
