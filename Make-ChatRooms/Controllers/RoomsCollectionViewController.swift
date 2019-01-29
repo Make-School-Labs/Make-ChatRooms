@@ -14,8 +14,11 @@ class RoomsTableViewController: UITableViewController {
     
     
     // MARK TODO: Can these uielements be extracted to a helper file?
-    let createRoomButton: UIBarButtonItem = {
-        let createJoinRoomButton = UIBarButtonItem(title: "Create Room", style: .plain, target: self, action: #selector(createRoom))
+    lazy var createRoomButton: UIBarButtonItem = {
+//        let createRoomButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+//        createRoomButton.addTarget(self, action: #selector(createRoom), for: .touchUpInside)
+//        createRoomButton.titleLabel?.text = "Create Room"
+        let createJoinRoomButton = UIBarButtonItem(title: "Create Room", style: .plain, target: self, action: #selector(createRoom(sender:)))
         return createJoinRoomButton
     }()
     
@@ -26,6 +29,7 @@ class RoomsTableViewController: UITableViewController {
         tableView?.backgroundColor = UIColor.white
         tableView?.alwaysBounceVertical = true
         self.navigationItem.title = "Active Rooms"
+//        let rightBarButton = UIBarButtonItem(customView: createRoomButton)
         self.navigationItem.rightBarButtonItem = createRoomButton
         
         tableView.register(RoomsTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
@@ -64,8 +68,20 @@ class RoomsTableViewController: UITableViewController {
         self.navigationController?.pushViewController(chatLogCollectionVC, animated: true)
     }
     
-    @objc func createRoom() {
+    @objc func createRoom(sender: UIBarButtonItem!) {
         print("Create room action being triggered")
+        showModalView()
+    }
+    
+    func showModalView() {
+        let modalViewController = CreateRoomModalViewController()
+        
+        modalViewController.modalPresentationStyle = .overCurrentContext
+        
+        self.present(modalViewController, animated: true) {
+            print("PRESENTED MODAL VIEW")
+        }
+//        self.performSegue(withIdentifier: "toCreateRoomView", sender: self)
     }
 }
 
