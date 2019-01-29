@@ -14,8 +14,8 @@ class CreateRoomModalViewController: UIViewController {
     lazy var modalView: UIView = {
         let width = self.view.frame.width
         let height = self.view.frame.height
-        let modalView = UIView(frame: CGRect(x: 50, y: 50, width: width / 2, height: height / 2))
-        modalView.backgroundColor = UIColor.red
+        let modalView = UIView(frame: CGRect(x: 70, y: 278, width: 300, height: 170))
+        modalView.backgroundColor = UIColor.gray
         return modalView
     }()
     
