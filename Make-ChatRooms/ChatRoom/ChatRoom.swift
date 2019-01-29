@@ -10,12 +10,19 @@ import Foundation
 import SocketIO
 
 class ChatRoom: NSObject {
+    var user: User?
+    
+//    func sendSocketNickname(user: User) {
+//        print("USER SENT THROUGH DELEGATE \(user)")
+//    }
+    
     static let manager = SocketManager(socketURL: URL(string: "http://localhost:4000/")!, config: [.log(true), .compress])
     private var socket = manager.defaultSocket // Singleton instance  one socket connection per phone
     
     //    static var roomName = ""
     
     override init() {
+        super.init()
         socket.connect() // When you instantiate the chat room the socket connects to the server
     }
     
@@ -37,6 +44,7 @@ class ChatRoom: NSObject {
     }
     
     func sendNickname(username: String) {
+        guard let username = self.user?.username else {return}
         self.socket.emit("socketUsername", username)
     }
     

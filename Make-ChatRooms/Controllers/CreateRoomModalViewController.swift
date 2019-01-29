@@ -11,7 +11,6 @@ import UIKit
 
 class CreateRoomModalViewController: UIViewController {
     
-    var delegate: RoomDelegate?
     
     lazy var roomName:UITextField = {
         let textField = UITextField(frame: CGRect(x: 20, y: 50, width: 300, height: 40))
@@ -47,7 +46,6 @@ class CreateRoomModalViewController: UIViewController {
         guard let roomName = roomName.text else {return}
         print("Name of the room user has chosen \(roomName)")
         var room = Room(roomName: roomName)
-        self.delegate?.sendRoomName(room: room)
     }
     
     func showAnimate() {
