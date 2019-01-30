@@ -12,6 +12,13 @@ import UIKit
 class CreateRoomModalViewController: UIViewController {
     let chatRoom = ChatRoom()
     
+    lazy var closeModalViewButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 30, y: 30, width: 30, height: 30))
+        button.addTarget(self, action: #selector(closeModalView), for: .touchUpInside)
+        button.backgroundColor = UIColor.red
+        return button
+    }()
+    
     lazy var roomName:UITextField = {
         let textField = UITextField(frame: CGRect(x: 20, y: 50, width: 300, height: 40))
         textField.placeholder = "Enter Room Name"
@@ -31,6 +38,7 @@ class CreateRoomModalViewController: UIViewController {
         modalView.backgroundColor = UIColor.gray
         modalView.addSubview(self.roomName)
         modalView.addSubview(self.joinButton)
+        modalView.addSubview(closeModalViewButton)
         
         return modalView
     }()
@@ -48,6 +56,12 @@ class CreateRoomModalViewController: UIViewController {
         var room = Room(roomName: roomName)
         chatRoom.room = room
         chatRoom.joinRoom()
+    }
+    
+    @objc func closeModalView() {
+        self.dismiss(animated: true) {
+            print("Dismissed modal view")
+        }
     }
     
     func showAnimate() {

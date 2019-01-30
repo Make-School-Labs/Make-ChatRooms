@@ -40,6 +40,10 @@ class RoomsTableViewController: UITableViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -78,7 +82,7 @@ class RoomsTableViewController: UITableViewController {
 //        self.view.backgroundColor = UIColor.gray
         modalViewController.modalPresentationStyle = .overCurrentContext
         
-        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffect = UIBlurEffect(style: .dark)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = self.view.bounds
         self.view.addSubview(blurView)
