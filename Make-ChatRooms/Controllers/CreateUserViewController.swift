@@ -11,7 +11,8 @@ import UIKit
 
 
 class CreateUserViewController: UIViewController {
+    
     override func viewDidLoad() {
-        <#code#>
+        super.viewDidLoad()
     }
 }
