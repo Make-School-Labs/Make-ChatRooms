@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/matthewharrilal/Desktop/Curriculum-Development/Make-ChatRooms/Make-ChatRooms/Views/ModalView.swift">
+   </FileRef>
+   <FileRef
       location = "group:Make-ChatRooms.xcodeproj">
    </FileRef>
    <FileRef

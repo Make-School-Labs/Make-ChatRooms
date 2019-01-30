@@ -55,6 +55,13 @@ class RoomsTableView: UITableViewController {
    
     @objc func createRoom(sender: UIBarButtonItem) {
         print("User wants to create a room")
+        showModalView()
+    }
+    
+    func showModalView() {
+        let modalController = ModalController()
+        modalController.modalPresentationStyle = .overCurrentContext
+        self.present(modalController, animated: true, completion: nil)
     }
 }
 
