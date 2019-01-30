@@ -11,6 +11,7 @@ import UIKit
 class ModalView: UIView {
     @IBOutlet var modalView: UIView!
     let chatRoom = ChatRoom()
+    var delegate: JoinedRoom?
     
     @IBOutlet weak var roomNameTextField: UITextField!
     
@@ -21,6 +22,7 @@ class ModalView: UIView {
         let room = Room(roomName: roomName)
         chatRoom.room = room
         chatRoom.joinRoom()
+        delegate?.dismissModalView()
     }
     
     override init(frame: CGRect) {

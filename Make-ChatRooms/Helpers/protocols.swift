@@ -11,3 +11,7 @@ import Foundation
 protocol RoomTransition {
     func transitionToRoom()
 }
+
+protocol JoinedRoom {
+    func dismissModalView()
+}

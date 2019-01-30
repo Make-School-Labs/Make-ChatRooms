@@ -10,12 +10,21 @@ import Foundation
 import UIKit
 
 
-class ModalController: UIViewController {
+class ModalController: UIViewController, JoinedRoom {
     let modalView = ModalView()
+    
+    func dismissModalView() {
+        self.dismiss(animated: true) {
+            print("MODAL VIEW BEING DISMISSED")
+        }        
+    }
+    
+   
     override func viewDidLoad() {
         modalView.frame = self.view.bounds
         self.view.addSubview(modalView)
         self.view.backgroundColor = UIColor.clear
+        modalView.delegate = self
     }
     
 }

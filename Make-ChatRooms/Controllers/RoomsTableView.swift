@@ -10,9 +10,7 @@ import UIKit
 
 class RoomsTableView: UITableViewController {
     
-    
-    
-//     MARK TODO: Can these uielements be extracted to a helper file?
+    //     MARK TODO: Can these uielements be extracted to a helper file?
     lazy var createRoomButton: UIBarButtonItem = {
         let createJoinRoomButton = UIBarButtonItem(title: "Create Room", style: .plain, target: self, action: #selector(createRoom(sender:)))
         return createJoinRoomButton
@@ -31,7 +29,7 @@ class RoomsTableView: UITableViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,7 +50,7 @@ class RoomsTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
-   
+    
     @objc func createRoom(sender: UIBarButtonItem) {
         print("User wants to create a room")
         showModalView()
@@ -63,5 +61,6 @@ class RoomsTableView: UITableViewController {
         modalController.modalPresentationStyle = .overCurrentContext
         self.present(modalController, animated: true, completion: nil)
     }
+
 }
 
