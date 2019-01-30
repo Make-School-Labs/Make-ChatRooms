@@ -16,12 +16,13 @@ class CreateUserView: UIView {
     //@IBOutlet var createUserView: UIView!
     @IBOutlet weak var makeSchoolLogoImageView: UIImageView!
     @IBOutlet weak var userNameTextField: UITextField!
-    
+    let chatRoom = ChatRoom()
 
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
+        
         configureImageView()
     }
     
@@ -36,6 +37,10 @@ class CreateUserView: UIView {
     
     @IBAction func joinChatRoomButton(_ sender: Any) {
         guard let username = userNameTextField.text else {return}
+        let user = User(username: username, activeRooms: nil)
+        chatRoom.user = user
+        chatRoom.sendNickname()
+        
     }
     
     private func configureImageView() {
@@ -44,7 +49,6 @@ class CreateUserView: UIView {
     
     private func commonInit() {
         Bundle.main.loadNibNamed("CreateUserView", owner: self, options: nil)
-//        userInfoView.frame = self.bounds
         addSubview(userInfoView)
         userInfoView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
