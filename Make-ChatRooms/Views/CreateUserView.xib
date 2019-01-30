@@ -12,9 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateUserView" customModule="Make_ChatRooms" customModuleProvider="target">
             <connections>
-                <outlet property="createUserView" destination="iN0-l3-epB" id="jY0-9h-HwE"/>
-                <outlet property="makeSchoolLogoImageView" destination="5as-UD-3pz" id="1Zq-nX-6fW"/>
-                <outlet property="userNameTextField" destination="SVE-Vn-BZK" id="rFg-zD-Ijj"/>
+                <outlet property="userInfoView" destination="iN0-l3-epB" id="rOx-HD-DSK"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
