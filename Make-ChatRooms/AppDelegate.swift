@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         
-        let roomsViewController = RoomsTableViewController(style: .plain)
         let createUserVC = CreateUser()
         
         window?.rootViewController = UINavigationController(rootViewController: createUserVC)

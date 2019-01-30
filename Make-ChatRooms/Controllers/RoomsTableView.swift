@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoomsTableViewController: UITableViewController {
+class RoomsTableView: UITableViewController {
     
     let cellIdentifier = "cellIdentifier"
     

@@ -11,13 +11,14 @@ import UIKit
 
 class CreateUserView: UIView {
     // View belonging to when the user signs up
-   
+    let chatRoom = ChatRoom()
+    var delegate: RoomTransition?
+    
     @IBOutlet weak var userInfoView:UIView!
     //@IBOutlet var createUserView: UIView!
     @IBOutlet weak var makeSchoolLogoImageView: UIImageView!
     @IBOutlet weak var userNameTextField: UITextField!
-    let chatRoom = ChatRoom()
-
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,7 +41,7 @@ class CreateUserView: UIView {
         let user = User(username: username, activeRooms: nil)
         chatRoom.user = user
         chatRoom.sendNickname()
-        
+        delegate?.transitionToRoom()
     }
     
     private func configureImageView() {
