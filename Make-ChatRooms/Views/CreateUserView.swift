@@ -14,19 +14,20 @@ class CreateUserView: UIView {
    
     @IBOutlet weak var userInfoView:UIView!
     //@IBOutlet var createUserView: UIView!
-    //@IBOutlet weak var makeSchoolLogoImageView: UIImageView!
-    //@IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var makeSchoolLogoImageView: UIImageView!
+    @IBOutlet weak var userNameTextField: UITextField!
     
 
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
-        //configureImageView()
+        configureImageView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        commonInit()
     }
     
     override func awakeFromNib() {
@@ -34,17 +35,17 @@ class CreateUserView: UIView {
     }
     
     @IBAction func joinChatRoomButton(_ sender: Any) {
-        //guard let username = nameTextField.text else {return}
+        guard let username = userNameTextField.text else {return}
     }
     
-//    private func configureImageView() {
-//        self.makeSchoolLogoImageView.image = #imageLiteral(resourceName: "MakeSchoolLogo")
-//    }
+    private func configureImageView() {
+        self.makeSchoolLogoImageView.image = #imageLiteral(resourceName: "MakeSchoolLogo")
+    }
     
     private func commonInit() {
         Bundle.main.loadNibNamed("CreateUserView", owner: self, options: nil)
-        //addSubview(userInfoView)
-        userInfoView.frame = self.bounds
+//        userInfoView.frame = self.bounds
+        addSubview(userInfoView)
         userInfoView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
 }

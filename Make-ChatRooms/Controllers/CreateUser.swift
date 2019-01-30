@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 
 class CreateUser: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        self.view.backgroundColor = UIColor.red
+        let createUserView = CreateUserView()
+        createUserView.frame = self.view.bounds
+        self.view.addSubview(createUserView)
     }
 }
