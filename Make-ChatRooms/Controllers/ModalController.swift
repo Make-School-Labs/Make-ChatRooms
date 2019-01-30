@@ -11,10 +11,11 @@ import UIKit
 
 
 class ModalController: UIViewController {
+    let modalView = ModalView()
     override func viewDidLoad() {
-        let modalView = ModalView()
         modalView.frame = self.view.bounds
         self.view.addSubview(modalView)
         self.view.backgroundColor = UIColor.clear
     }
+    
 }

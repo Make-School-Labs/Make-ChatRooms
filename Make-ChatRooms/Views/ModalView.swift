@@ -10,10 +10,17 @@ import UIKit
 
 class ModalView: UIView {
     @IBOutlet var modalView: UIView!
+    let chatRoom = ChatRoom()
     
     @IBOutlet weak var roomNameTextField: UITextField!
     
     @IBAction func joinRoomButton(_ sender: UIButton) {
+        guard let roomName = roomNameTextField.text else {return}
+        
+        // Once we have the room name, how can we proceed?
+        let room = Room(roomName: roomName)
+        chatRoom.room = room
+        chatRoom.joinRoom()
     }
     
     override init(frame: CGRect) {
@@ -31,4 +38,5 @@ class ModalView: UIView {
         modalView.backgroundColor = UIColor.clear
         addSubview(modalView)
     }
+    
 }
