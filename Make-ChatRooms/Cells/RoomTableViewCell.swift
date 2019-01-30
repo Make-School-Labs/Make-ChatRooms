@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Foundation
 
 class RoomTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var roomTitle: UILabel!
+    @IBOutlet weak var recentRoomMessage: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
