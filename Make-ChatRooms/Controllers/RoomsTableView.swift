@@ -69,12 +69,10 @@ class RoomsTableView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        guard let activeRooms = self.activeRooms else
-//        {self.navigationController?.title = "No Active Rooms"
-//            return 0
-//        }
+        if RoomsTableView.activeRooms.count == 0 {
+            self.navigationController?.title = "No Active Rooms"
+        }
         
-        print(RoomsTableView.activeRooms.count)
         return RoomsTableView.activeRooms.count
     }
     

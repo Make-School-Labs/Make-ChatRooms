@@ -37,7 +37,7 @@ class ModalView: UIView {
     
     func commonInit() {
         Bundle.main.loadNibNamed("ModalView", owner: self, options: nil)
-        modalView.backgroundColor = UIColor.purple
+        modalView.backgroundColor = UIColor.clear
         addSubview(modalView)
     }
     
