@@ -12,7 +12,7 @@ import UIKit
 class CreateUserView: UIView {
     // View belonging to when the user signs up
     let chatRoom = ChatRoom()
-    var delegate: RoomTransition?
+    weak var delegate: RoomTransition?
     
     @IBOutlet weak var userInfoView:UIView!
     //@IBOutlet var createUserView: UIView!

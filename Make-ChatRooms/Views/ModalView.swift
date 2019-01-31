@@ -11,7 +11,7 @@ import UIKit
 class ModalView: UIView {
     @IBOutlet var modalView: UIView!
     let chatRoom = ChatRoom()
-    var delegate: JoinedRoom?
+    weak var delegate: JoinedRoom?
     
     @IBOutlet weak var roomNameTextField: UITextField!
     
@@ -37,7 +37,7 @@ class ModalView: UIView {
     
     func commonInit() {
         Bundle.main.loadNibNamed("ModalView", owner: self, options: nil)
-        modalView.backgroundColor = UIColor.clear
+        modalView.backgroundColor = UIColor.purple
         addSubview(modalView)
     }
     

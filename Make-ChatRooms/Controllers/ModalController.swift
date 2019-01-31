@@ -11,7 +11,7 @@ import UIKit
 
 
 class ModalController: UIViewController, JoinedRoom {
-    let modalView = ModalView()
+    let modalView = ModalView() // Controller -> Modal View
     
     func dismissModalView() {
         self.dismiss(animated: true) {
@@ -24,7 +24,7 @@ class ModalController: UIViewController, JoinedRoom {
         modalView.frame = self.view.bounds
         self.view.addSubview(modalView)
         self.view.backgroundColor = UIColor.clear
-        modalView.delegate = self
+        modalView.delegate = self // Modal View -> Pointing Back
     }
     
 }

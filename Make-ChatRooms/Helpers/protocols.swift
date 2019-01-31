@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol RoomTransition {
+protocol RoomTransition: class {
     func transitionToRoom()
 }
 
-protocol JoinedRoom {
+protocol JoinedRoom : class { // Specifying that only classes will be conform to the protocol
     func dismissModalView()
 }
