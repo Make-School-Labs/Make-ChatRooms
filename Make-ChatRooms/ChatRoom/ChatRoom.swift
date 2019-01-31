@@ -46,6 +46,7 @@ class ChatRoom: NSObject {
     
     func sendNickname() {
         guard let username = self.user?.username else {return}
+//        let user = User(username: username, activeRooms: nil)
         self.socket.emit("socketUsername", username)
     }
     
@@ -57,8 +58,11 @@ class ChatRoom: NSObject {
     func joinRoom() {
         guard let room = self.room else {return}
         self.socket.emit("joinRoom", room.roomName) // Join pre-exisiting chat room with given name being sent to server
-        self.user?.activeRooms?.append(room)
-        RoomsTableView.activeRooms.append(room)
+        RoomsTableView.shared.activeRooms.append(room)
+        DispatchQueue.main.async {
+            RoomsTableView.shared.tableView.reloadData()
+        }
+
     }
     
     func createRoom(roomName: String) {

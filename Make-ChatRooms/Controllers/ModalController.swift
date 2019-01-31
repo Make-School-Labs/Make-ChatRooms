@@ -23,7 +23,7 @@ class ModalController: UIViewController, JoinedRoom {
     override func viewDidLoad() {
         modalView.frame = self.view.bounds
         self.view.addSubview(modalView)
-        self.view.backgroundColor = UIColor.clear
+        self.view.backgroundColor = UIColor.white
         modalView.delegate = self // Modal View -> Pointing Back
     }
     

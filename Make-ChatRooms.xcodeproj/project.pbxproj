@@ -20,6 +20,7 @@
 		1C2FC05C21FFD53500288F07 /* CreateRoomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05B21FFD53500288F07 /* CreateRoomModalViewController.swift */; };
 		1C2FC05F2200255100288F07 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05E2200255100288F07 /* ChatRoom.swift */; };
 		1C3BBFB12202576400F931FF /* ModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3BBFB02202576400F931FF /* ModalController.swift */; };
+		1C3BBFB322027BC800F931FF /* SharedInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3BBFB222027BC800F931FF /* SharedInstance.swift */; };
 		1C597BCD220214C100B4762D /* CreateUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C597BCC220214C100B4762D /* CreateUserView.xib */; };
 		1C597BCF2202153F00B4762D /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C597BCE2202153F00B4762D /* CreateUserView.swift */; };
 		1C597BD42202339F00B4762D /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C597BD32202339F00B4762D /* CreateUser.swift */; };
@@ -60,6 +61,7 @@
 		1C2FC05B21FFD53500288F07 /* CreateRoomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModalViewController.swift; sourceTree = "<group>"; };
 		1C2FC05E2200255100288F07 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		1C3BBFB02202576400F931FF /* ModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalController.swift; sourceTree = "<group>"; };
+		1C3BBFB222027BC800F931FF /* SharedInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedInstance.swift; sourceTree = "<group>"; };
 		1C597BCC220214C100B4762D /* CreateUserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateUserView.xib; sourceTree = "<group>"; };
 		1C597BCE2202153F00B4762D /* CreateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserView.swift; sourceTree = "<group>"; };
 		1C597BD32202339F00B4762D /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				1C2FC05B21FFD53500288F07 /* CreateRoomModalViewController.swift */,
 				1C597BD32202339F00B4762D /* CreateUser.swift */,
 				1C3BBFB02202576400F931FF /* ModalController.swift */,
+				1C3BBFB222027BC800F931FF /* SharedInstance.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				1C597BE5220251DC00B4762D /* RoomTableViewCell.swift in Sources */,
 				1C2FC02C21FF902500288F07 /* AppDelegate.swift in Sources */,
 				1C597BEA2202541400B4762D /* ModalView.swift in Sources */,
+				1C3BBFB322027BC800F931FF /* SharedInstance.swift in Sources */,
 				1C597BD42202339F00B4762D /* CreateUser.swift in Sources */,
 				1C2FC03421FF902500288F07 /* Make_ChatRooms.xcdatamodeld in Sources */,
 				1C3BBFB12202576400F931FF /* ModalController.swift in Sources */,

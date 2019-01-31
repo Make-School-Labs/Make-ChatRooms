@@ -8,14 +8,11 @@
 
 import UIKit
 
+
 class RoomsTableView: UITableViewController {
-    static var activeRooms: [Room] = [Room]() {
-        didSet {
-            DispatchQueue.main.async {
-                print("RELOADING TABLE VIEW \(self.activeRooms[0].roomName)")
-            }
-        }
-    }
+    static var shared = RoomsTableView()
+    
+    var activeRooms: [Room] = [Room]()
     
     //     MARK TODO: Can these uielements be extracted to a helper file?
     lazy var createRoomButton: UIBarButtonItem = {
@@ -60,7 +57,7 @@ class RoomsTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell", for: indexPath) as! RoomTableViewCell
-        cell.textLabel?.text = RoomsTableView.activeRooms[indexPath.row].roomName
+        cell.textLabel?.text = RoomsTableView.shared.activeRooms[indexPath.row].roomName
         return cell
     }
     
@@ -69,11 +66,11 @@ class RoomsTableView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if RoomsTableView.activeRooms.count == 0 {
+        if RoomsTableView.shared.activeRooms.count == 0 {
             self.navigationController?.title = "No Active Rooms"
         }
         
-        return RoomsTableView.activeRooms.count
+        return RoomsTableView.shared.activeRooms.count
     }
     
     @objc func createRoom(sender: UIBarButtonItem) {
@@ -83,6 +80,7 @@ class RoomsTableView: UITableViewController {
     
     func showModalView() {
         let modalController = ModalController()
+//        modalController.modalPresentationStyle = .overCurrentContext
         self.present(modalController, animated: true, completion: nil)
     }
 
