@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import UIKit
+
+
+enum MessageSender {
+    case ourself
+    case someoneElse
+}
+
+
+class MessageTableView: UITableViewCell {
+//    var mess
+}
