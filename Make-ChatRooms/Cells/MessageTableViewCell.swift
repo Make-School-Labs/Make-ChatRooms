@@ -47,6 +47,8 @@ class MessageTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    // Measurements and layout for messages
     private class func height(forText text: String, fontSize: CGFloat, maxSize: CGSize) -> CGFloat {
         let font = UIFont(name: "Helvetica", size: fontSize)!
         let attrString = NSAttributedString(string: text, attributes:[NSAttributedStringKey.font: font,
@@ -56,7 +58,7 @@ class MessageTableViewCell: UITableViewCell {
         return textHeight
     }
     
-    class func Height(for message: Message) -> CGFloat {
+    class func height(for message: Message) -> CGFloat {
         let maxSize = CGSize(width: 2*(UIScreen.main.bounds.size.width/3), height: CGFloat.greatestFiniteMagnitude)
         let nameHeight = message.messageSender == .ourself ? 0 : (height(forText: message.senderUsername, fontSize: 10, maxSize: maxSize) + 4 )
         let messageHeight = height(forText: message.messageContent, fontSize: 17, maxSize: maxSize)

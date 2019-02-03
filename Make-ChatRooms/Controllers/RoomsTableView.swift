@@ -55,6 +55,11 @@ class RoomsTableView: UITableViewController {
         return 1
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatRoomViewController = ChatRoomViewController()
+        self.navigationController?.pushViewController(chatRoomViewController, animated: true)
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell", for: indexPath) as! RoomTableViewCell
         cell.textLabel?.text = RoomsTableView.shared.activeRooms[indexPath.row].roomName

@@ -10,6 +10,9 @@
 		1C2B08AE220781D5005DB3BD /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B08AD220781D5005DB3BD /* ChatRoomViewController.swift */; };
 		1C2B08B02207821C005DB3BD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B08AF2207821C005DB3BD /* Message.swift */; };
 		1C2B08B22207827E005DB3BD /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B08B12207827E005DB3BD /* MessageTableViewCell.swift */; };
+		1C2B08B4220787E2005DB3BD /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B08B3220787E2005DB3BD /* MessageInputView.swift */; };
+		1C2B08B622078AD9005DB3BD /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B08B522078AD9005DB3BD /* Layouts.swift */; };
+		1C2B08B822078B66005DB3BD /* ChatRoomViewController+TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B08B722078B66005DB3BD /* ChatRoomViewController+TableViewController.swift */; };
 		1C2FC02C21FF902500288F07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC02B21FF902500288F07 /* AppDelegate.swift */; };
 		1C2FC02E21FF902500288F07 /* RoomsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC02D21FF902500288F07 /* RoomsTableView.swift */; };
 		1C2FC03121FF902500288F07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2FC02F21FF902500288F07 /* Main.storyboard */; };
@@ -50,6 +53,9 @@
 		1C2B08AD220781D5005DB3BD /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		1C2B08AF2207821C005DB3BD /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1C2B08B12207827E005DB3BD /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		1C2B08B3220787E2005DB3BD /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
+		1C2B08B522078AD9005DB3BD /* Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
+		1C2B08B722078B66005DB3BD /* ChatRoomViewController+TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatRoomViewController+TableViewController.swift"; sourceTree = "<group>"; };
 		1C2FC02821FF902500288F07 /* Make-ChatRooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make-ChatRooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2FC02B21FF902500288F07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C2FC02D21FF902500288F07 /* RoomsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableView.swift; sourceTree = "<group>"; };
@@ -199,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				1C597BD522023AEE00B4762D /* protocols.swift */,
+				1C2B08B522078AD9005DB3BD /* Layouts.swift */,
+				1C2B08B722078B66005DB3BD /* ChatRoomViewController+TableViewController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -210,6 +218,7 @@
 				1C597BCC220214C100B4762D /* CreateUserView.xib */,
 				1C597BCE2202153F00B4762D /* CreateUserView.swift */,
 				1C597BE7220253FF00B4762D /* ModalView.xib */,
+				1C2B08B3220787E2005DB3BD /* MessageInputView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -476,8 +485,11 @@
 				1C2B08B22207827E005DB3BD /* MessageTableViewCell.swift in Sources */,
 				1C3BBFB322027BC800F931FF /* SharedInstance.swift in Sources */,
 				1C597BD42202339F00B4762D /* CreateUser.swift in Sources */,
+				1C2B08B4220787E2005DB3BD /* MessageInputView.swift in Sources */,
 				1C2FC03421FF902500288F07 /* Make_ChatRooms.xcdatamodeld in Sources */,
 				1C3BBFB12202576400F931FF /* ModalController.swift in Sources */,
+				1C2B08B622078AD9005DB3BD /* Layouts.swift in Sources */,
+				1C2B08B822078B66005DB3BD /* ChatRoomViewController+TableViewController.swift in Sources */,
 				1C2FC05F2200255100288F07 /* ChatRoom.swift in Sources */,
 				1C2FC05C21FFD53500288F07 /* CreateRoomModalViewController.swift in Sources */,
 			);

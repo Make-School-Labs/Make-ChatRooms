@@ -11,8 +11,12 @@ import UIKit
 
 class ChatRoomViewController: UIViewController {
     let tableView = UITableView()
+    let messageInputBar = MessageInputView()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var messages = [Message]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
     }
+    
 }
