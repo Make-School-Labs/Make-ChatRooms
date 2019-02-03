@@ -24,15 +24,15 @@ class ChatRoomViewController: UIViewController {
 }
 
 
-//
-////MARK - Message Input Bar
+
+//MARK - Message Input Bar
 //extension ChatRoomViewController: MessageInputDelegate {
 //    func sendWasTapped(message: String) {
 //        print("Sent Message \(message)")
 //        chatRoom.sendMessage(message: message)
 //    }
 //}
-//
+
 //extension ChatRoomViewController: ChatRoomDelegate {
 //
 //    func recievedMessage(message: Message) {

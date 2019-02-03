@@ -10,13 +10,106 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Make-ChatRooms/Views/MessageInputView.swift"
-            timestampString = "570921554.738472"
+            timestampString = "570922645.034412"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
             endingLineNumber = "48"
             landmarkName = "sendTapped()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Make-ChatRooms/Controllers/CreateRoomModalViewController.swift"
+            timestampString = "570922592.833869"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "CreateRoomModalViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Make_ChatRooms.CreateRoomModalViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Make_ChatRooms.CreateRoomModalViewController"
+                  moduleName = "Make-ChatRooms"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewharrilal/Desktop/Curriculum-Development/Make-ChatRooms/Make-ChatRooms/Controllers/CreateRoomModalViewController.swift"
+                  timestampString = "570922645.497759"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Make_ChatRooms.CreateRoomModalViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Make_ChatRooms.CreateRoomModalViewController"
+                  moduleName = "Make-ChatRooms"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewharrilal/Desktop/Curriculum-Development/Make-ChatRooms/Make-ChatRooms/Controllers/CreateRoomModalViewController.swift"
+                  timestampString = "570922645.504375"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Make_ChatRooms.CreateRoomModalViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Make_ChatRooms.CreateRoomModalViewController&gt;"
+                  moduleName = "Make-ChatRooms"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewharrilal/Desktop/Curriculum-Development/Make-ChatRooms/Make-ChatRooms/Controllers/CreateRoomModalViewController.swift"
+                  timestampString = "570922645.507352"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Make_ChatRooms.CreateRoomModalViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Make_ChatRooms.CreateRoomModalViewController&gt;"
+                  moduleName = "Make-ChatRooms"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewharrilal/Desktop/Curriculum-Development/Make-ChatRooms/Make-ChatRooms/Controllers/CreateRoomModalViewController.swift"
+                  timestampString = "570922645.5113209"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Make_ChatRooms.CreateRoomModalViewController.__deallocating_deinit"
+                  moduleName = "Make-ChatRooms"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewharrilal/Desktop/Curriculum-Development/Make-ChatRooms/Make-ChatRooms/Controllers/CreateRoomModalViewController.swift"
+                  timestampString = "570922645.513451"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

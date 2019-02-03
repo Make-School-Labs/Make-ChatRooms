@@ -20,10 +20,8 @@
 		1C2FC03621FF902500288F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2FC03521FF902500288F07 /* Assets.xcassets */; };
 		1C2FC03921FF902500288F07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2FC03721FF902500288F07 /* LaunchScreen.storyboard */; };
 		1C2FC04421FF902600288F07 /* Make_ChatRoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC04321FF902600288F07 /* Make_ChatRoomsTests.swift */; };
-		1C2FC05321FFB5F700288F07 /* ChatLogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05221FFB5F700288F07 /* ChatLogCollectionViewController.swift */; };
 		1C2FC05621FFBE3800288F07 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05521FFBE3800288F07 /* User.swift */; };
 		1C2FC05821FFBF1700288F07 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05721FFBF1700288F07 /* Room.swift */; };
-		1C2FC05C21FFD53500288F07 /* CreateRoomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05B21FFD53500288F07 /* CreateRoomModalViewController.swift */; };
 		1C2FC05F2200255100288F07 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05E2200255100288F07 /* ChatRoom.swift */; };
 		1C3BBFB12202576400F931FF /* ModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3BBFB02202576400F931FF /* ModalController.swift */; };
 		1C3BBFB322027BC800F931FF /* SharedInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3BBFB222027BC800F931FF /* SharedInstance.swift */; };
@@ -67,10 +65,8 @@
 		1C2FC03F21FF902600288F07 /* Make-ChatRoomsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Make-ChatRoomsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2FC04321FF902600288F07 /* Make_ChatRoomsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Make_ChatRoomsTests.swift; sourceTree = "<group>"; };
 		1C2FC04521FF902600288F07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C2FC05221FFB5F700288F07 /* ChatLogCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogCollectionViewController.swift; sourceTree = "<group>"; };
 		1C2FC05521FFBE3800288F07 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1C2FC05721FFBF1700288F07 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
-		1C2FC05B21FFD53500288F07 /* CreateRoomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomModalViewController.swift; sourceTree = "<group>"; };
 		1C2FC05E2200255100288F07 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		1C3BBFB02202576400F931FF /* ModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalController.swift; sourceTree = "<group>"; };
 		1C3BBFB222027BC800F931FF /* SharedInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedInstance.swift; sourceTree = "<group>"; };
@@ -163,8 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				1C2FC02D21FF902500288F07 /* RoomsTableView.swift */,
-				1C2FC05221FFB5F700288F07 /* ChatLogCollectionViewController.swift */,
-				1C2FC05B21FFD53500288F07 /* CreateRoomModalViewController.swift */,
 				1C597BD32202339F00B4762D /* CreateUser.swift */,
 				1C3BBFB02202576400F931FF /* ModalController.swift */,
 				1C3BBFB222027BC800F931FF /* SharedInstance.swift */,
@@ -471,7 +465,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C2FC05321FFB5F700288F07 /* ChatLogCollectionViewController.swift in Sources */,
 				1C597BCF2202153F00B4762D /* CreateUserView.swift in Sources */,
 				1C2FC02E21FF902500288F07 /* RoomsTableView.swift in Sources */,
 				1C2B08B02207821C005DB3BD /* Message.swift in Sources */,
@@ -491,7 +484,6 @@
 				1C2B08B622078AD9005DB3BD /* Layouts.swift in Sources */,
 				1C2B08B822078B66005DB3BD /* ChatRoomViewController+TableViewController.swift in Sources */,
 				1C2FC05F2200255100288F07 /* ChatRoom.swift in Sources */,
-				1C2FC05C21FFD53500288F07 /* CreateRoomModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
