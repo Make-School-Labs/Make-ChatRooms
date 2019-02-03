@@ -14,14 +14,17 @@ protocol MessageInputDelegate {
 }
 
 class MessageInputView: UIView{
+    // Delegate used to notify that the send message button was tapped
     var delegate: MessageInputDelegate?
     
+    // Instantiating text view responsible for typing the message
     let textView = UITextView()
     let sendButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        // Initalize layout of the the send button and the text view
         backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1.0)
         textView.layer.cornerRadius = 4
         textView.layer.borderColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 0.6).cgColor
@@ -42,11 +45,13 @@ class MessageInputView: UIView{
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func sendTapped() {
-        if let delegate = delegate, let message = textView.text {
-            delegate.sendWasTapped(message: message)
-            textView.text = "" // Reset text view contents to "" string
-        }
+    @objc func sendTapped() { // Reset the text view when the sender triggers the protocol function
+//        if let delegate = delegate, let message = textView.text {
+//            delegate.sendWasTapped(message: message)
+//            textView.text = "" // Reset text view contents to "" string
+//        }
+        guard let messsage = textView.text else {return}
+        delegate?.sendWasTapped(message: messsage)
     }
     
     override func layoutSubviews() {

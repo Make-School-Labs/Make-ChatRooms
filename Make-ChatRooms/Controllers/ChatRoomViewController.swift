@@ -11,6 +11,8 @@ import UIKit
 
 class ChatRoomViewController: UIViewController {
     let tableView = UITableView()
+    
+    // Instantiate the message input view that adds itself as a subview
     let messageInputBar = MessageInputView()
     
     var messages = [Message]()
@@ -20,3 +22,22 @@ class ChatRoomViewController: UIViewController {
     }
     
 }
+
+
+//
+////MARK - Message Input Bar
+//extension ChatRoomViewController: MessageInputDelegate {
+//    func sendWasTapped(message: String) {
+//        print("Sent Message \(message)")
+//        chatRoom.sendMessage(message: message)
+//    }
+//}
+//
+//extension ChatRoomViewController: ChatRoomDelegate {
+//
+//    func recievedMessage(message: Message) {
+//        print("Recieved Message \(message.message)")
+//        insertNewMessageCell(message)
+//    }
+//
+//}

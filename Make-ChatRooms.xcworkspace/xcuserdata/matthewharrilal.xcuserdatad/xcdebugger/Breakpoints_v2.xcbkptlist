@@ -10,45 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Make-ChatRooms/Views/MessageInputView.swift"
-            timestampString = "570919834.0519429"
+            timestampString = "570921554.738472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "init(frame:)"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "sendTapped()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Make_ChatRooms.MessageInputView.__allocating_init(frame: __C.CGRect) -&gt; Make_ChatRooms.MessageInputView"
-                  moduleName = "Make-ChatRooms"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matthewharrilal/Desktop/Curriculum-Development/Make-ChatRooms/Make-ChatRooms/Views/MessageInputView.swift"
-                  timestampString = "570919834.291613"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Make_ChatRooms.MessageInputView.init(frame: __C.CGRect) -&gt; Make_ChatRooms.MessageInputView"
-                  moduleName = "Make-ChatRooms"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matthewharrilal/Desktop/Curriculum-Development/Make-ChatRooms/Make-ChatRooms/Views/MessageInputView.swift"
-                  timestampString = "570919834.293823"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "89">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

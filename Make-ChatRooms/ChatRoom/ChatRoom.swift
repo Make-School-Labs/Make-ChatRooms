@@ -51,8 +51,11 @@ class ChatRoom: NSObject {
     }
     
     
-    func sendMessage() { // Has to conect first so triggering message isn't the first thing that occurs
-        self.socket.emit("chat message", "Part Deux!") // Make the messages dynamic in this portion
+    // Is goingt now take in a message object
+    func sendMessage(message: Message) { // Has to conect first so triggering message isn't the first thing that occurs
+        
+        // MARK : TODO HAVE TO FIX THIS DOWNCASTING PORTION
+        self.socket.emit("chat message", with: message as! [Any])
     }
     
     func joinRoom() {
