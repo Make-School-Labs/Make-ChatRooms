@@ -52,10 +52,10 @@ class ChatRoom: NSObject {
     
     
     // Is goingt now take in a message object
-    func sendMessage(message: Message) { // Has to conect first so triggering message isn't the first thing that occurs
+    func sendMessage(message: String) { // Has to conect first so triggering message isn't the first thing that occurs
         
         // MARK : TODO HAVE TO FIX THIS DOWNCASTING PORTION
-        self.socket.emit("chat message", with: message as! [Any])
+        self.socket.emit("chat message", message)
     }
     
     func joinRoom() {

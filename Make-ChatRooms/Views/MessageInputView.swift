@@ -45,6 +45,7 @@ class MessageInputView: UIView{
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     @objc func sendTapped() { // Reset the text view when the sender triggers the protocol function
 //        if let delegate = delegate, let message = textView.text {
 //            delegate.sendWasTapped(message: message)
