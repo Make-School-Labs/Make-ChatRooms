@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2B08AE220781D5005DB3BD /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B08AD220781D5005DB3BD /* ChatRoomViewController.swift */; };
+		1C2B08B02207821C005DB3BD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B08AF2207821C005DB3BD /* Message.swift */; };
+		1C2B08B22207827E005DB3BD /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B08B12207827E005DB3BD /* MessageTableViewCell.swift */; };
 		1C2FC02C21FF902500288F07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC02B21FF902500288F07 /* AppDelegate.swift */; };
 		1C2FC02E21FF902500288F07 /* RoomsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC02D21FF902500288F07 /* RoomsTableView.swift */; };
 		1C2FC03121FF902500288F07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2FC02F21FF902500288F07 /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C2B08AD220781D5005DB3BD /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		1C2B08AF2207821C005DB3BD /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1C2B08B12207827E005DB3BD /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		1C2FC02821FF902500288F07 /* Make-ChatRooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make-ChatRooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2FC02B21FF902500288F07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C2FC02D21FF902500288F07 /* RoomsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableView.swift; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 				1C597BD32202339F00B4762D /* CreateUser.swift */,
 				1C3BBFB02202576400F931FF /* ModalController.swift */,
 				1C3BBFB222027BC800F931FF /* SharedInstance.swift */,
+				1C2B08AD220781D5005DB3BD /* ChatRoomViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,6 +172,7 @@
 			children = (
 				1C597BE3220251DC00B4762D /* RoomTableViewCell.swift */,
 				1C597BE4220251DC00B4762D /* RoomTableViewCell.xib */,
+				1C2B08B12207827E005DB3BD /* MessageTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 			children = (
 				1C2FC05521FFBE3800288F07 /* User.swift */,
 				1C2FC05721FFBF1700288F07 /* Room.swift */,
+				1C2B08AF2207821C005DB3BD /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -456,12 +465,15 @@
 				1C2FC05321FFB5F700288F07 /* ChatLogCollectionViewController.swift in Sources */,
 				1C597BCF2202153F00B4762D /* CreateUserView.swift in Sources */,
 				1C2FC02E21FF902500288F07 /* RoomsTableView.swift in Sources */,
+				1C2B08B02207821C005DB3BD /* Message.swift in Sources */,
+				1C2B08AE220781D5005DB3BD /* ChatRoomViewController.swift in Sources */,
 				1C597BD622023AEE00B4762D /* protocols.swift in Sources */,
 				1C2FC05821FFBF1700288F07 /* Room.swift in Sources */,
 				1C2FC05621FFBE3800288F07 /* User.swift in Sources */,
 				1C597BE5220251DC00B4762D /* RoomTableViewCell.swift in Sources */,
 				1C2FC02C21FF902500288F07 /* AppDelegate.swift in Sources */,
 				1C597BEA2202541400B4762D /* ModalView.swift in Sources */,
+				1C2B08B22207827E005DB3BD /* MessageTableViewCell.swift in Sources */,
 				1C3BBFB322027BC800F931FF /* SharedInstance.swift in Sources */,
 				1C597BD42202339F00B4762D /* CreateUser.swift in Sources */,
 				1C2FC03421FF902500288F07 /* Make_ChatRooms.xcdatamodeld in Sources */,

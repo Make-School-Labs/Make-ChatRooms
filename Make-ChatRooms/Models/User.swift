@@ -9,7 +9,7 @@
 import Foundation
 
 
-class User: NSObject {
+struct User {
     var username: String
     var activeRooms: [Room]? = [Room]()
     
