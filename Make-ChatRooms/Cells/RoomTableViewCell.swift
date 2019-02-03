@@ -12,7 +12,7 @@ class RoomTableViewCell: UITableViewCell {
     @IBOutlet weak var roomTitle: UILabel!
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: "RoomTableViewCell")
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
     
     required init?(coder aDecoder: NSCoder) {
