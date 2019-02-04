@@ -84,19 +84,20 @@ class RoomsTableView: UITableViewController {
         let createRoomAlert = UIAlertController(title: "Enter Room Name", message: "Please enter the name of the room you'd like to join or create!", preferredStyle: .alert)
         createRoomAlert.addTextField { (roomNameTextField) in
             roomNameTextField.placeholder = "Room Name?"
-            guard let roomName = roomNameTextField.text else {return}
-            
-            print("Name of the room user wants to create \(roomName)")
         }
         
-        let saveAction = UIAlertAction(title: "Create/Join Room", style: .default, handler: nil)
+        let saveAction = UIAlertAction(title: "Create/Join Room", style: .default) { (action) in
+            guard let roomName = createRoomAlert.textFields?[0].text else {return}
+            print("Name of the room user wants to create/join \(roomName)")
+        }
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             print("User has canceled the action to create/join a room")
         }
         createRoomAlert.addAction(saveAction)
         createRoomAlert.addAction(cancelAction)
         self.present(createRoomAlert, animated: true, completion: nil)
-        //        showModalView()
+//                showModalView()
     }
     
     func showModalView() {
