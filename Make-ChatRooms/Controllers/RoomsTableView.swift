@@ -13,6 +13,7 @@ class RoomsTableView: UITableViewController {
     static var shared = RoomsTableView()
     
     var activeRooms: [Room] = [Room]()
+    let chatRoom = ChatRoom()
     
     //     MARK TODO: Can these uielements be extracted to a helper file?
     lazy var createRoomButton: UIBarButtonItem = {
@@ -89,6 +90,10 @@ class RoomsTableView: UITableViewController {
         let saveAction = UIAlertAction(title: "Create/Join Room", style: .default) { (action) in
             guard let roomName = createRoomAlert.textFields?[0].text else {return}
             print("Name of the room user wants to create/join \(roomName)")
+            let room = Room(roomName: roomName)
+            self.chatRoom.room = room
+            self.chatRoom.joinRoom()
+            
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
