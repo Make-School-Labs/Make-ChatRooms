@@ -18,7 +18,7 @@ import UIKit
 
 
 class MessageTableViewCell: UITableViewCell {
-//    var messageSender: MessageSender = .ourself
+    //    var messageSender: MessageSender = .ourself
     let messageContentLabel = UILabel()
     let nameLabel = UILabel()
     
@@ -33,14 +33,11 @@ class MessageTableViewCell: UITableViewCell {
         messageContentLabel.clipsToBounds = true
         messageContentLabel.textColor = .white
         messageContentLabel.numberOfLines = 0
-        
+
         nameLabel.textColor = .lightGray
         nameLabel.font = UIFont(name: "Helvetica", size: 10)
-        
+
         clipsToBounds = true
-        let testView = UIView(frame: CGRect(x: 20, y: 20, width: 50, height: 50))
-        testView.backgroundColor = UIColor.red
-        addSubview(testView)
         addSubview(messageContentLabel)
         addSubview(nameLabel)
     }
