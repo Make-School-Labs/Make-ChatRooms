@@ -12,6 +12,7 @@ import SocketIO
 class ChatRoom: NSObject {
     var user: User?
     var room: Room?
+    var delegate: ChatRoomDelegate?
     
     //    func sendSocketNickname(user: User) {
     //        print("USER SENT THROUGH DELEGATE \(user)")
@@ -45,8 +46,8 @@ class ChatRoom: NSObject {
             //            let dataObject = NSKeyedArchiver.archivedData(withRootObject: data[0])
             //            let message = NSKeyedUnarchiver.unarchiveObject(with: dataObject) as! Message
             let serializedData = try? JSONSerialization.data(withJSONObject: messageDict, options: .prettyPrinted)
-            let message = try? JSONDecoder().decode(Message.self, from: serializedData!)
-            
+            guard let message = try? JSONDecoder().decode(Message.self, from: serializedData!) else {return}
+            self.delegate?.recievedMessage(message: message)
             
             print("CHAT DATA \(message)")
         }

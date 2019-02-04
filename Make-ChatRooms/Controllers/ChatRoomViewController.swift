@@ -12,6 +12,8 @@ import UIKit
 class ChatRoomViewController: UIViewController {
     let tableView = UITableView()
     let chatRoom = ChatRoom()
+//    var messageSender = true
+
     // Instantiate the message input view that adds itself as a subview
     let messageInputBar = MessageInputView()
     
@@ -19,6 +21,7 @@ class ChatRoomViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        chatRoom.delegate = self
     }
     
 }
@@ -31,17 +34,18 @@ extension ChatRoomViewController: MessageInputDelegate {
         print("Sent Message \(message)")
         let messageObject = Message(messageContent: message, senderUsername: "Test Username", messageSender: true)
         chatRoom.sendMessage(message: messageObject)
-        
+//        messageSender = true
         insertNewMessageCell(messageObject)
        
     }
 }
 
-//extension ChatRoomViewController: ChatRoomDelegate {
-//
-//    func recievedMessage(message: Message) {
-//        print("Recieved Message \(message.message)")
-//        insertNewMessageCell(message)
-//    }
-//
-//}
+extension ChatRoomViewController: ChatRoomDelegate {
+    func recievedMessage(message: Message) {
+//        messageSender = false
+        insertNewMessageCell(message)
+    }
+    
+
+   
+}
