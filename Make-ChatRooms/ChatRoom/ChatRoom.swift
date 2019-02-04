@@ -41,6 +41,7 @@ class ChatRoom: NSObject {
         }
         
         socket.on("chat message") { (data, ack) in
+            //            let message = try? JSONDecoder().decode(Message.self, from: data)
             print("CHAT DATA \(data)")
         }
     }
@@ -57,10 +58,9 @@ class ChatRoom: NSObject {
         
         // MARK : TODO HAVE TO FIX THIS DOWNCASTING PORTION
         
-        let encoder = JSONEncoder()
-        let json = try? encoder.encode(message)
-        
-        self.socket.emit("chat message", with: [json])
+        // SENDING COMPLEX DATA TYPE DIDNT ALLOW ME TO DECODE WHEN COMING BACK TO EVENT LISTENER
+        let testMessage: [String : Any] = ["senderUsername": message.senderUsername, "messageContent": message.messageContent, "messageSender": message.messageSender]
+        self.socket.emit("chat message", testMessage)
     }
     
     func joinRoom() {
