@@ -13,9 +13,9 @@ class ChatRoom: NSObject {
     var user: User?
     var room: Room?
     
-//    func sendSocketNickname(user: User) {
-//        print("USER SENT THROUGH DELEGATE \(user)")
-//    }
+    //    func sendSocketNickname(user: User) {
+    //        print("USER SENT THROUGH DELEGATE \(user)")
+    //    }
     
     static let manager = SocketManager(socketURL: URL(string: "http://localhost:4000/")!, config: [.log(true), .compress])
     private var socket = manager.defaultSocket // Singleton instance  one socket connection per phone
@@ -47,7 +47,7 @@ class ChatRoom: NSObject {
     
     func sendNickname() {
         guard let username = self.user?.username else {return}
-//        let user = User(username: username, activeRooms: nil)
+        //        let user = User(username: username, activeRooms: nil)
         self.socket.emit("socketUsername", username)
     }
     
@@ -56,11 +56,11 @@ class ChatRoom: NSObject {
     func sendMessage(message: String) { // Has to conect first so triggering message isn't the first thing that occurs
         
         // MARK : TODO HAVE TO FIX THIS DOWNCASTING PORTION
-       let testMessage = Message(messageContent: message, senderUsername: "Test Sender")
+        let testMessage = Message(messageContent: message, senderUsername: "Test Sender")
+        var encoder = JSONEncoder()
+        let json = try? encoder.encode(testMessage)
         
-        let jsonEncoder = JSONEncoder()
-        let json = jsonEncoder.encode(testMessage)
-        self.socket.emit("chat message", testMessage)
+        self.socket.emit("chat message", with: [json])
     }
     
     func joinRoom() {
@@ -70,7 +70,7 @@ class ChatRoom: NSObject {
         DispatchQueue.main.async {
             RoomsTableView.shared.tableView.reloadData()
         }
-
+        
     }
     
     func createRoom(roomName: String) {

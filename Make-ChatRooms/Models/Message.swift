@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct Message {
+struct Message: Codable {
     let messageContent: String
     let senderUsername: String
 //    let messageSender: MessageSender
@@ -23,15 +23,18 @@ struct Message {
 //    private enum CodingKeys: String,CodingKey {
 //        case messageContent
 //        case senderUsername
-//        case messageSender
 //    }
 //
 //    required convenience init(from decoder: Decoder) {
 //        let container = try? decoder.container(keyedBy: CodingKeys.self)
 //        let messageContent = try? container?.decode(String.self, forKey: .messageContent)
-////        let senderUsername = try? container?.decode(MessageSender.self, forKey: .senderUsername)
-//
-//        let messageSender = try? container?.decodeIfPresent(String.self, forKey: .messageSender)
-//        self.init(messageContent: messageContent as! String, senderUsername: senderUsername as! String, messageSender: nil)
+//        let senderUsername = try? container?.decode(String.self, forKey: .senderUsername)
+//        self.init(messageContent: messageContent as! String, senderUsername: senderUsername as! String)
+//    }
+//    
+//    func encode(to encoder: Encoder) {
+//        var container = encoder.container(keyedBy: CodingKeys.self)
+//        let messageContent = container.encode(String.self, forKey: .messageContent)
+//        
 //    }
 }
