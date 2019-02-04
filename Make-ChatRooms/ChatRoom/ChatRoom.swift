@@ -25,6 +25,7 @@ class ChatRoom: NSObject {
     override init() {
         super.init()
         socket.connect() // When you instantiate the chat room the socket connects to the server
+        emittedEvents()
     }
     
     
@@ -55,7 +56,11 @@ class ChatRoom: NSObject {
     func sendMessage(message: String) { // Has to conect first so triggering message isn't the first thing that occurs
         
         // MARK : TODO HAVE TO FIX THIS DOWNCASTING PORTION
-        self.socket.emit("chat message", message)
+       let testMessage = Message(messageContent: message, senderUsername: "Test Sender")
+        
+        let jsonEncoder = JSONEncoder()
+        let json = jsonEncoder.encode(testMessage)
+        self.socket.emit("chat message", testMessage)
     }
     
     func joinRoom() {

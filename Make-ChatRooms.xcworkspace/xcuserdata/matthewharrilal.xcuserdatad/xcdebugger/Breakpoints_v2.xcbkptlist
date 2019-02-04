@@ -9,22 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Make-ChatRooms/Views/MessageInputView.swift"
-            timestampString = "570925061.220631"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "sendTapped()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Make-ChatRooms/Controllers/CreateRoomModalViewController.swift"
             timestampString = "570922592.833869"
             startingColumnNumber = "9223372036854775807"
@@ -41,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Make-ChatRooms/Controllers/ChatRoomViewController.swift"
-            timestampString = "570925061.221162"
+            filePath = "Make-ChatRooms/ChatRoom/ChatRoom.swift"
+            timestampString = "570945540.276649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "sendWasTapped(message:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "emittedEvents()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

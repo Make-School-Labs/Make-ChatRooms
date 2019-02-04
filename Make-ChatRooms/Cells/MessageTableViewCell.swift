@@ -11,21 +11,20 @@ import UIKit
 
 
 // To represent state of the sender of the message
-enum MessageSender {
-    case ourself
-    case someoneElse
-}
+//enum MessageSender {
+//    case ourself
+//    case someoneElse
+//}
 
 
 class MessageTableViewCell: UITableViewCell {
-    var messageSender: MessageSender = .ourself
+//    var messageSender: MessageSender = .ourself
     let messageContentLabel = UILabel()
     let nameLabel = UILabel()
     
     func apply(message: Message) { // When applying a message to the cell update below information
         nameLabel.text = message.senderUsername
         messageContentLabel.text = message.messageContent
-        messageSender = message.messageSender
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -60,7 +59,8 @@ class MessageTableViewCell: UITableViewCell {
     
     class func height(for message: Message) -> CGFloat {
         let maxSize = CGSize(width: 2*(UIScreen.main.bounds.size.width/3), height: CGFloat.greatestFiniteMagnitude)
-        let nameHeight = message.messageSender == .ourself ? 0 : (height(forText: message.senderUsername, fontSize: 10, maxSize: maxSize) + 4 )
+        
+        let nameHeight = height(forText: message.senderUsername, fontSize: 10, maxSize:maxSize)
         let messageHeight = height(forText: message.messageContent, fontSize: 17, maxSize: maxSize)
         
         return nameHeight + messageHeight + 32 + 16
