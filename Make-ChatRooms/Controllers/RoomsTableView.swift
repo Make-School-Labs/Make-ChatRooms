@@ -42,7 +42,7 @@ class RoomsTableView: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.tableView.reloadData()
-
+        
     }
     
     
@@ -90,16 +90,20 @@ class RoomsTableView: UITableViewController {
         }
         
         let saveAction = UIAlertAction(title: "Create/Join Room", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            print("User has canceled the action to create/join a room")
+        }
         createRoomAlert.addAction(saveAction)
+        createRoomAlert.addAction(cancelAction)
         self.present(createRoomAlert, animated: true, completion: nil)
-//        showModalView()
+        //        showModalView()
     }
     
     func showModalView() {
         let modalController = ModalController()
-//        modalController.modalPresentationStyle = .overCurrentContext
+        //        modalController.modalPresentationStyle = .overCurrentContext
         self.present(modalController, animated: true, completion: nil)
     }
-
+    
 }
 
