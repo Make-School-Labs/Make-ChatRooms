@@ -8,6 +8,10 @@
 
 import Foundation
 
+class MessageSenderToggle {
+    static var messageSender = true
+}
+
 protocol RoomTransition: class {
     func transitionToRoom()
 }

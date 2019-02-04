@@ -34,15 +34,17 @@ extension ChatRoomViewController: MessageInputDelegate {
         print("Sent Message \(message)")
         let messageObject = Message(messageContent: message, senderUsername: "Test Username", messageSender: true)
         chatRoom.sendMessage(message: messageObject)
-//        messageSender = true
+        MessageSenderToggle.messageSender = true
         insertNewMessageCell(messageObject)
        
     }
 }
 
 extension ChatRoomViewController: ChatRoomDelegate {
+    
+    // You know if you are receiving a message then you are not the sender therefore you can set message sender to false
     func recievedMessage(message: Message) {
-//        messageSender = false
+        MessageSenderToggle.messageSender = false
         insertNewMessageCell(message)
     }
     

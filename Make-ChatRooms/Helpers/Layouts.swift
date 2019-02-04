@@ -67,7 +67,7 @@ extension MessageTableViewCell {
             messageContentLabel.frame = CGRect(x: 0, y: 0, width: size.width + 32, height: size.height + 16)
             
             
-            if messageSender == true {
+            if MessageSenderToggle.messageSender == true {
                 nameLabel.isHidden = true
                 
                 messageContentLabel.center = CGPoint(x: bounds.size.width - messageContentLabel.bounds.size.width/2.0 - 16, y: bounds.size.height/2.0)
