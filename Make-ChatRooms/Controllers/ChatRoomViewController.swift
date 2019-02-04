@@ -29,8 +29,11 @@ class ChatRoomViewController: UIViewController {
 extension ChatRoomViewController: MessageInputDelegate {
     func sendWasTapped(message: String) {
         print("Sent Message \(message)")
-        chatRoom.sendMessage(message: message)
-        insertNewMessageCell(Message(messageContent: message, senderUsername: "Test Username"))
+        let messageObject = Message(messageContent: message, senderUsername: "Test Username", messageSender: true)
+        chatRoom.sendMessage(message: messageObject)
+        
+        insertNewMessageCell(messageObject)
+       
     }
 }
 

@@ -56,7 +56,7 @@ extension ChatRoomViewController {
 extension MessageTableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+        let messageSender = true
         if isJoinMessage() {
             layoutForJoinMessage()
         } else {
@@ -67,12 +67,19 @@ extension MessageTableViewCell {
             messageContentLabel.frame = CGRect(x: 0, y: 0, width: size.width + 32, height: size.height + 16)
             
             
-            nameLabel.isHidden = false
-            nameLabel.sizeToFit()
-            nameLabel.center = CGPoint(x: nameLabel.bounds.size.width/2.0 + 16 + 4, y: nameLabel.bounds.size.height/2.0 + 4)
-            
-            messageContentLabel.center = CGPoint(x: messageContentLabel.bounds.size.width/2.0 + 16, y: messageContentLabel.bounds.size.height/2.0 + nameLabel.bounds.size.height + 8)
-            messageContentLabel.backgroundColor = .lightGray
+            if messageSender == true {
+                nameLabel.isHidden = true
+                
+                messageContentLabel.center = CGPoint(x: bounds.size.width - messageContentLabel.bounds.size.width/2.0 - 16, y: bounds.size.height/2.0)
+                messageContentLabel.backgroundColor = UIColor(red: 24/255, green: 180/255, blue: 128/255, alpha: 1.0)
+            } else {
+                nameLabel.isHidden = false
+                nameLabel.sizeToFit()
+                nameLabel.center = CGPoint(x: nameLabel.bounds.size.width/2.0 + 16 + 4, y: nameLabel.bounds.size.height/2.0 + 4)
+                
+                messageContentLabel.center = CGPoint(x: messageContentLabel.bounds.size.width/2.0 + 16, y: messageContentLabel.bounds.size.height/2.0 + nameLabel.bounds.size.height + 8)
+                messageContentLabel.backgroundColor = .lightGray
+            }
             
         }
         

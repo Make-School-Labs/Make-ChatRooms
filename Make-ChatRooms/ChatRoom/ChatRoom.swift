@@ -53,13 +53,12 @@ class ChatRoom: NSObject {
     
     
     // Is goingt now take in a message object
-    func sendMessage(message: String) { // Has to conect first so triggering message isn't the first thing that occurs
+    func sendMessage(message: Message) { // Has to conect first so triggering message isn't the first thing that occurs
         
         // MARK : TODO HAVE TO FIX THIS DOWNCASTING PORTION
-        let testMessage = Message(messageContent: message, senderUsername: "Test Sender")
         
         let encoder = JSONEncoder()
-        let json = try? encoder.encode(testMessage)
+        let json = try? encoder.encode(message)
         
         self.socket.emit("chat message", with: [json])
     }
