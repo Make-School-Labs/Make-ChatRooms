@@ -15,3 +15,7 @@ protocol RoomTransition: class {
 protocol JoinedRoom : class { // Specifying that only classes will be conform to the protocol
     func dismissModalView()
 }
+
+protocol ChatRoomDelegate: class {
+    func recievedMessage(message: Message)
+}
