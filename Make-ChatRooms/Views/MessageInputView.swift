@@ -52,6 +52,8 @@ class MessageInputView: UIView{
 //            textView.text = "" // Reset text view contents to "" string
 //        }
         guard let messsage = textView.text else {return}
+        textView.text = ""
+        
         delegate?.sendWasTapped(message: messsage)
     }
     
