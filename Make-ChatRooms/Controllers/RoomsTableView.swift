@@ -93,7 +93,7 @@ class RoomsTableView: UITableViewController {
             let room = Room(roomName: roomName)
             self.chatRoom.room = room
             self.chatRoom.joinRoom()
-            
+            self.tableView.reloadData()
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
@@ -102,13 +102,6 @@ class RoomsTableView: UITableViewController {
         createRoomAlert.addAction(saveAction)
         createRoomAlert.addAction(cancelAction)
         self.present(createRoomAlert, animated: true, completion: nil)
-//                showModalView()
-    }
-    
-    func showModalView() {
-        let modalController = ModalController()
-        //        modalController.modalPresentationStyle = .overCurrentContext
-        self.present(modalController, animated: true, completion: nil)
     }
     
 }

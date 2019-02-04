@@ -23,7 +23,6 @@
 		1C2FC05621FFBE3800288F07 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05521FFBE3800288F07 /* User.swift */; };
 		1C2FC05821FFBF1700288F07 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05721FFBF1700288F07 /* Room.swift */; };
 		1C2FC05F2200255100288F07 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC05E2200255100288F07 /* ChatRoom.swift */; };
-		1C3BBFB12202576400F931FF /* ModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3BBFB02202576400F931FF /* ModalController.swift */; };
 		1C3BBFB322027BC800F931FF /* SharedInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3BBFB222027BC800F931FF /* SharedInstance.swift */; };
 		1C597BCD220214C100B4762D /* CreateUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C597BCC220214C100B4762D /* CreateUserView.xib */; };
 		1C597BCF2202153F00B4762D /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C597BCE2202153F00B4762D /* CreateUserView.swift */; };
@@ -68,7 +67,6 @@
 		1C2FC05521FFBE3800288F07 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1C2FC05721FFBF1700288F07 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		1C2FC05E2200255100288F07 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
-		1C3BBFB02202576400F931FF /* ModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalController.swift; sourceTree = "<group>"; };
 		1C3BBFB222027BC800F931FF /* SharedInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedInstance.swift; sourceTree = "<group>"; };
 		1C597BCC220214C100B4762D /* CreateUserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateUserView.xib; sourceTree = "<group>"; };
 		1C597BCE2202153F00B4762D /* CreateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserView.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 			children = (
 				1C2FC02D21FF902500288F07 /* RoomsTableView.swift */,
 				1C597BD32202339F00B4762D /* CreateUser.swift */,
-				1C3BBFB02202576400F931FF /* ModalController.swift */,
 				1C3BBFB222027BC800F931FF /* SharedInstance.swift */,
 				1C2B08AD220781D5005DB3BD /* ChatRoomViewController.swift */,
 			);
@@ -480,7 +477,6 @@
 				1C597BD42202339F00B4762D /* CreateUser.swift in Sources */,
 				1C2B08B4220787E2005DB3BD /* MessageInputView.swift in Sources */,
 				1C2FC03421FF902500288F07 /* Make_ChatRooms.xcdatamodeld in Sources */,
-				1C3BBFB12202576400F931FF /* ModalController.swift in Sources */,
 				1C2B08B622078AD9005DB3BD /* Layouts.swift in Sources */,
 				1C2B08B822078B66005DB3BD /* ChatRoomViewController+TableViewController.swift in Sources */,
 				1C2FC05F2200255100288F07 /* ChatRoom.swift in Sources */,
