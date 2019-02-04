@@ -41,8 +41,14 @@ class ChatRoom: NSObject {
         }
         
         socket.on("chat message") { (data, ack) in
-            //            let message = try? JSONDecoder().decode(Message.self, from: data)
-            print("CHAT DATA \(data)")
+            let messageDict = data[0] as! NSDictionary
+//            let dataObject = NSKeyedArchiver.archivedData(withRootObject: data[0])
+//            let message = NSKeyedUnarchiver.unarchiveObject(with: dataObject) as! Message
+            let serializedData = try? JSONSerialization.data(withJSONObject: messageDict, options: .prettyPrinted)
+            let message = try? JSONDecoder().decode(Message.self, from: serializedData!)
+           
+            
+            print("CHAT DATA \(message)")
         }
     }
     

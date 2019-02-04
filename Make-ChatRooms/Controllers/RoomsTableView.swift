@@ -80,7 +80,19 @@ class RoomsTableView: UITableViewController {
     
     @objc func createRoom(sender: UIBarButtonItem) {
         print("User wants to create a room")
-        showModalView()
+        
+        let createRoomAlert = UIAlertController(title: "Enter Room Name", message: "Please enter the name of the room you'd like to join or create!", preferredStyle: .alert)
+        createRoomAlert.addTextField { (roomNameTextField) in
+            roomNameTextField.placeholder = "Room Name?"
+            guard let roomName = roomNameTextField.text else {return}
+            
+            print("Name of the room user wants to create \(roomName)")
+        }
+        
+        let saveAction = UIAlertAction(title: "Create/Join Room", style: .default, handler: nil)
+        createRoomAlert.addAction(saveAction)
+        self.present(createRoomAlert, animated: true, completion: nil)
+//        showModalView()
     }
     
     func showModalView() {
