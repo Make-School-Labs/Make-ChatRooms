@@ -42,11 +42,11 @@ class ChatRoom: NSObject {
         
         socket.on("chat message") { (data, ack) in
             let messageDict = data[0] as! NSDictionary
-//            let dataObject = NSKeyedArchiver.archivedData(withRootObject: data[0])
-//            let message = NSKeyedUnarchiver.unarchiveObject(with: dataObject) as! Message
+            //            let dataObject = NSKeyedArchiver.archivedData(withRootObject: data[0])
+            //            let message = NSKeyedUnarchiver.unarchiveObject(with: dataObject) as! Message
             let serializedData = try? JSONSerialization.data(withJSONObject: messageDict, options: .prettyPrinted)
             let message = try? JSONDecoder().decode(Message.self, from: serializedData!)
-           
+            
             
             print("CHAT DATA \(message)")
         }
@@ -63,7 +63,6 @@ class ChatRoom: NSObject {
     func sendMessage(message: Message) { // Has to conect first so triggering message isn't the first thing that occurs
         
         
-        
         // MARK: TODO  SENDING COMPLEX DATA TYPE DIDNT ALLOW ME TO DECODE WHEN COMING BACK TO EVENT LISTENER
         let testMessage: [String : Any] = ["senderUsername": message.senderUsername, "messageContent": message.messageContent, "messageSender": message.messageSender]
         self.socket.emit("chat message", testMessage)
@@ -73,10 +72,6 @@ class ChatRoom: NSObject {
         guard let room = self.room else {return}
         self.socket.emit("joinRoom", room.roomName) // Join pre-exisiting chat room with given name being sent to server
         RoomsTableView.shared.activeRooms.append(room)
-        DispatchQueue.main.async {
-            RoomsTableView.shared.tableView.reloadData()
-        }
-        
     }
     
     func createRoom(roomName: String) {
