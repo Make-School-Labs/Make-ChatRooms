@@ -12,12 +12,12 @@ import Foundation
 struct Message: Codable {
     let messageContent: String
     let senderUsername: String
-//    let messageSender: MessageSender
+    let messageSender: Bool
     
-    init(messageContent: String, senderUsername: String) {
+    init(messageContent: String, senderUsername: String, messageSender: Bool) {
         self.messageContent = messageContent
         self.senderUsername = senderUsername
-//        self.messageSender = messageSender
+        self.messageSender = messageSender
     }
     
 //    private enum CodingKeys: String,CodingKey {
@@ -31,10 +31,10 @@ struct Message: Codable {
 //        let senderUsername = try? container?.decode(String.self, forKey: .senderUsername)
 //        self.init(messageContent: messageContent as! String, senderUsername: senderUsername as! String)
 //    }
-//    
+//
 //    func encode(to encoder: Encoder) {
 //        var container = encoder.container(keyedBy: CodingKeys.self)
 //        let messageContent = container.encode(String.self, forKey: .messageContent)
-//        
+//
 //    }
 }
