@@ -25,6 +25,7 @@ class MessageTableViewCell: UITableViewCell {
     func apply(message: Message) { // When applying a message to the cell update below information
         nameLabel.text = message.senderUsername
         messageContentLabel.text = message.messageContent
+        setNeedsLayout()
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -37,7 +38,9 @@ class MessageTableViewCell: UITableViewCell {
         nameLabel.font = UIFont(name: "Helvetica", size: 10)
         
         clipsToBounds = true
-        
+        let testView = UIView(frame: CGRect(x: 20, y: 20, width: 50, height: 50))
+        testView.backgroundColor = UIColor.red
+        addSubview(testView)
         addSubview(messageContentLabel)
         addSubview(nameLabel)
     }

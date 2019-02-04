@@ -11,7 +11,7 @@ import UIKit
 
 extension ChatRoomViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = MessageTableViewCell(style: .default, reuseIdentifier: "MessageCell")
+        let cell = MessageTableViewCell(style: .default, reuseIdentifier: "MessageCell") 
         cell.selectionStyle = .none
         
         let message = messages[indexPath.row]

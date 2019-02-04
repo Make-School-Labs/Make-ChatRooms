@@ -42,7 +42,7 @@ extension ChatRoomViewController {
         view.addSubview(tableView)
         view.addSubview(messageInputBar)
         
-        messageInputBar.delegate = self as! MessageInputDelegate
+        messageInputBar.delegate = self 
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

@@ -57,7 +57,8 @@ class ChatRoom: NSObject {
         
         // MARK : TODO HAVE TO FIX THIS DOWNCASTING PORTION
         let testMessage = Message(messageContent: message, senderUsername: "Test Sender")
-        var encoder = JSONEncoder()
+        
+        let encoder = JSONEncoder()
         let json = try? encoder.encode(testMessage)
         
         self.socket.emit("chat message", with: [json])
