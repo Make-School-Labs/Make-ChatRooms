@@ -16,7 +16,6 @@
 		1C2FC02C21FF902500288F07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC02B21FF902500288F07 /* AppDelegate.swift */; };
 		1C2FC02E21FF902500288F07 /* RoomsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC02D21FF902500288F07 /* RoomsTableView.swift */; };
 		1C2FC03121FF902500288F07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2FC02F21FF902500288F07 /* Main.storyboard */; };
-		1C2FC03421FF902500288F07 /* Make_ChatRooms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC03221FF902500288F07 /* Make_ChatRooms.xcdatamodeld */; };
 		1C2FC03621FF902500288F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2FC03521FF902500288F07 /* Assets.xcassets */; };
 		1C2FC03921FF902500288F07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2FC03721FF902500288F07 /* LaunchScreen.storyboard */; };
 		1C2FC04421FF902600288F07 /* Make_ChatRoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2FC04321FF902600288F07 /* Make_ChatRoomsTests.swift */; };
@@ -57,7 +56,6 @@
 		1C2FC02B21FF902500288F07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C2FC02D21FF902500288F07 /* RoomsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableView.swift; sourceTree = "<group>"; };
 		1C2FC03021FF902500288F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1C2FC03321FF902500288F07 /* Make_ChatRooms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Make_ChatRooms.xcdatamodel; sourceTree = "<group>"; };
 		1C2FC03521FF902500288F07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C2FC03821FF902500288F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C2FC03A21FF902500288F07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				1C2FC03521FF902500288F07 /* Assets.xcassets */,
 				1C2FC03721FF902500288F07 /* LaunchScreen.storyboard */,
 				1C2FC03A21FF902500288F07 /* Info.plist */,
-				1C2FC03221FF902500288F07 /* Make_ChatRooms.xcdatamodeld */,
 			);
 			path = "Make-ChatRooms";
 			sourceTree = "<group>";
@@ -476,7 +473,6 @@
 				1C3BBFB322027BC800F931FF /* SharedInstance.swift in Sources */,
 				1C597BD42202339F00B4762D /* CreateUser.swift in Sources */,
 				1C2B08B4220787E2005DB3BD /* MessageInputView.swift in Sources */,
-				1C2FC03421FF902500288F07 /* Make_ChatRooms.xcdatamodeld in Sources */,
 				1C2B08B622078AD9005DB3BD /* Layouts.swift in Sources */,
 				1C2B08B822078B66005DB3BD /* ChatRoomViewController+TableViewController.swift in Sources */,
 				1C2FC05F2200255100288F07 /* ChatRoom.swift in Sources */,
@@ -727,19 +723,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1C2FC03221FF902500288F07 /* Make_ChatRooms.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1C2FC03321FF902500288F07 /* Make_ChatRooms.xcdatamodel */,
-			);
-			currentVersion = 1C2FC03321FF902500288F07 /* Make_ChatRooms.xcdatamodel */;
-			path = Make_ChatRooms.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1C2FC02021FF902500288F07 /* Project object */;
 }

@@ -43,13 +43,12 @@ class ChatRoom: NSObject {
         
         socket.on("chat message") { (data, ack) in
             let messageDict = data[0] as! NSDictionary
-            //            let dataObject = NSKeyedArchiver.archivedData(withRootObject: data[0])
-            //            let message = NSKeyedUnarchiver.unarchiveObject(with: dataObject) as! Message
+
             let serializedData = try? JSONSerialization.data(withJSONObject: messageDict, options: .prettyPrinted)
             guard let message = try? JSONDecoder().decode(Message.self, from: serializedData!) else {return}
             self.delegate?.recievedMessage(message: message)
             
-            print("CHAT DATA \(message)")
+            print("CHAT DATA \(data)")
         }
     }
     
@@ -66,6 +65,7 @@ class ChatRoom: NSObject {
         
         // MARK: TODO  SENDING COMPLEX DATA TYPE DIDNT ALLOW ME TO DECODE WHEN COMING BACK TO EVENT LISTENER
         let testMessage: [String : Any] = ["senderUsername": message.senderUsername, "messageContent": message.messageContent, "messageSender": message.messageSender]
+        
         self.socket.emit("chat message", testMessage)
     }
     
