@@ -30,7 +30,7 @@ extension ChatRoomViewController {
         }
     }
     func loadViews() {
-        navigationItem.title = "Let's Chat!"
+//        navigationItem.title = "Let's Chat!"
         navigationItem.backBarButtonItem?.title = "Run!"
         
         view.backgroundColor = UIColor(red: 24/255, green: 180/255, blue: 128/255, alpha: 1.0)

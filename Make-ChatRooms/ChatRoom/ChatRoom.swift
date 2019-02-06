@@ -10,6 +10,7 @@ import Foundation
 import SocketIO
 
 class ChatRoom: NSObject {
+    static var shared = ChatRoom()
     var user: User?
     var room: Room?
     var delegate: ChatRoomDelegate?
@@ -67,6 +68,8 @@ class ChatRoom: NSObject {
     
     func joinRoom() {
         guard let room = self.room else {return}
+//        let chatRoom = ChatRoomViewController()
+//        chatRoom.navigationItem.title = room.roomName
         self.socket.emit("joinRoom", room.roomName) // Join pre-exisiting chat room with given name being sent to server
         RoomsTableView.shared.activeRooms.append(room)
     }

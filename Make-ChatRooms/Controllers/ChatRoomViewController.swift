@@ -21,7 +21,8 @@ class ChatRoomViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        chatRoom.delegate = self
+        ChatRoom.shared.delegate = self
+        self.navigationItem.title = ChatRoom.shared.room?.roomName
     }
     
 }

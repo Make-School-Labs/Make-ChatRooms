@@ -11,7 +11,7 @@ import UIKit
 
 class CreateUserView: UIView {
     // View belonging to when the user signs up
-    let chatRoom = ChatRoom()
+//    let chatRoom = ChatRoom()
     weak var delegate: RoomTransition?
     
     @IBOutlet weak var userInfoView:UIView!
@@ -39,8 +39,8 @@ class CreateUserView: UIView {
     @IBAction func joinChatRoomButton(_ sender: Any) {
         guard let username = userNameTextField.text else {return}
         let user = User(username: username, activeRooms: nil)
-        chatRoom.user = user
-        chatRoom.sendNickname()
+        ChatRoom.shared.user = user
+        ChatRoom.shared.sendNickname()
         delegate?.transitionToRoom()
     }
     
