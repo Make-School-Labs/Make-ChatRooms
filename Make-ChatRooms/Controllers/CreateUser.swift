@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class CreateUser: UIViewController, RoomTransition {
+    let chatRoom = ChatRoom()
     func transitionToRoom() {
         let roomTableView = RoomsTableView()
         self.navigationController?.pushViewController(roomTableView, animated: true)

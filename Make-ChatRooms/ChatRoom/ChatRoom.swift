@@ -46,6 +46,10 @@ class ChatRoom: NSObject {
             guard let message = try? JSONDecoder().decode(Message.self, from: data[0] as! Data) else {return}
             self.delegate?.recievedMessage(message: message)
         }
+        
+        socket.on("usernameCollision") { (data, ack) in
+            print(data)
+        }
     }
     
     func sendNickname() {
