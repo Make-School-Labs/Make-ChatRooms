@@ -8,10 +8,6 @@
 
 import Foundation
 
-class MessageSenderToggle {
-    static var messageSender = true
-}
-
 protocol RoomTransition: class {
     func transitionToRoom()
 }
@@ -19,7 +15,11 @@ protocol RoomTransition: class {
 protocol ChatRoomDelegate: class {
     func recievedMessage(message: Message)
 }
+//
+//protocol MessageSender: class {
+//    func passMessageSender()
+//}
 
-protocol MessageSender: class {
-    func passMessageSender()
+protocol UsernameDelegate: class {
+    func usernameCollision()
 }

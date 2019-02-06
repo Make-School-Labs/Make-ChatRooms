@@ -48,7 +48,10 @@ class ChatRoom: NSObject {
         }
         
         socket.on("usernameCollision") { (data, ack) in
-            print(data)
+            let usernameAlert = UIAlertController(title: "Different Username Please", message: "The username you have chosen is already taken by somebody currently connected.", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Try Again", style: .cancel, handler: nil)
+            usernameAlert.addAction(cancelAction)
+            
         }
     }
     
