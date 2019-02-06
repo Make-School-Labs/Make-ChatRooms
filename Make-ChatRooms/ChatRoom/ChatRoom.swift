@@ -51,6 +51,8 @@ class ChatRoom: NSObject {
         guard let username = self.user?.username else {return}
         //        let user = User(username: username, activeRooms: nil)
         self.socket.emit("socketUsername", username)
+        let userDefaults = UserDefaults()
+        userDefaults.set(username, forKey: "username")
     }
     
     

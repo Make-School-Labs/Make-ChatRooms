@@ -31,8 +31,10 @@ class ChatRoomViewController: UIViewController {
 //MARK - Message Input Bar
 extension ChatRoomViewController: MessageInputDelegate {
     func sendWasTapped(message: String) {
+        let userDefaults = UserDefaults()
+        guard let username = userDefaults.value(forKey: "username") else {return}
         print("Sent Message \(message)")
-        let messageObject = Message(messageContent: message, senderUsername: "Test Username", messageSender: true)
+        let messageObject = Message(messageContent: message, senderUsername: username as! String , messageSender: true)
         chatRoom.sendMessage(message: messageObject)
         MessageSenderToggle.messageSender = true
         insertNewMessageCell(messageObject)
