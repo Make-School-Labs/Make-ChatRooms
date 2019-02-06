@@ -38,7 +38,6 @@ extension ChatRoomViewController: MessageInputDelegate {
         print("Sent Message \(message)")
         let messageObject = Message(messageContent: message, senderUsername: username as! String , messageSender: true)
         chatRoom.sendMessage(message: messageObject, roomName: self.roomName)
-        MessageSenderToggle.messageSender = true
         insertNewMessageCell(messageObject)
        
     }
