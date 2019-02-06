@@ -42,13 +42,8 @@ class ChatRoom: NSObject {
         }
         
         socket.on("chat message") { (data, ack) in
-            let messageDict = data[0] as! NSDictionary
-
-            let serializedData = try? JSONSerialization.data(withJSONObject: messageDict, options: .prettyPrinted)
-            guard let message = try? JSONDecoder().decode(Message.self, from: serializedData!) else {return}
+            guard let message = try? JSONDecoder().decode(Message.self, from: data[0] as! Data) else {return}
             self.delegate?.recievedMessage(message: message)
-            
-            print("CHAT DATA \(data)")
         }
     }
     
@@ -63,10 +58,14 @@ class ChatRoom: NSObject {
     func sendMessage(message: Message) { // Has to conect first so triggering message isn't the first thing that occurs
         
         
-        // MARK: TODO  SENDING COMPLEX DATA TYPE DIDNT ALLOW ME TO DECODE WHEN COMING BACK TO EVENT LISTENER
+//        // MARK: TODO  SENDING COMPLEX DATA TYPE DIDNT ALLOW ME TO DECODE WHEN COMING BACK TO EVENT LISTENER
         let testMessage: [String : Any] = ["senderUsername": message.senderUsername, "messageContent": message.messageContent, "messageSender": message.messageSender]
+
         
-        self.socket.emit("chat message", testMessage)
+        let jsonData = try? JSONEncoder().encode(message)
+        
+        
+        self.socket.emit("chat message", jsonData!)
     }
     
     func joinRoom() {
