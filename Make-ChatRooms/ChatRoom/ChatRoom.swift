@@ -57,15 +57,10 @@ class ChatRoom: NSObject {
     // Is goingt now take in a message object
     func sendMessage(message: Message) { // Has to conect first so triggering message isn't the first thing that occurs
         
-        
-//        // MARK: TODO  SENDING COMPLEX DATA TYPE DIDNT ALLOW ME TO DECODE WHEN COMING BACK TO EVENT LISTENER
-        let testMessage: [String : Any] = ["senderUsername": message.senderUsername, "messageContent": message.messageContent, "messageSender": message.messageSender]
-
-        
-        let jsonData = try? JSONEncoder().encode(message)
+        guard let jsonData = try? JSONEncoder().encode(message) else {return} // Have to encode because message object isnt a native json object
         
         
-        self.socket.emit("chat message", jsonData!)
+        self.socket.emit("chat message", jsonData)
     }
     
     func joinRoom() {
