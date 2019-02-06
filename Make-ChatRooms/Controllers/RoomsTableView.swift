@@ -58,6 +58,7 @@ class RoomsTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let chatRoomViewController = ChatRoomViewController()
+        chatRoomViewController.roomName = RoomsTableView.shared.activeRooms[indexPath.row].roomName
         self.navigationController?.pushViewController(chatRoomViewController, animated: true)
     }
     
