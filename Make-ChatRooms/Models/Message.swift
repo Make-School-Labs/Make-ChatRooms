@@ -12,7 +12,7 @@ import Foundation
 class Message: Codable {
     let messageContent: String
     let senderUsername: String
-    let messageSender: Bool?
+    var messageSender: Bool?
     
     init(messageContent: String, senderUsername: String, messageSender: Bool?) {
         self.messageContent = messageContent

@@ -44,10 +44,7 @@ extension ChatRoomViewController: ChatRoomDelegate {
     
     // You know if you are receiving a message then you are not the sender therefore you can set message sender to false
     func recievedMessage(message: Message) {
-        MessageSenderToggle.messageSender = false
+        message.messageSender = false
         insertNewMessageCell(message)
     }
-    
-
-   
 }

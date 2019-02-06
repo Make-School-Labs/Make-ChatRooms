@@ -19,3 +19,7 @@ protocol RoomTransition: class {
 protocol ChatRoomDelegate: class {
     func recievedMessage(message: Message)
 }
+
+protocol MessageSender: class {
+    func passMessageSender()
+}
