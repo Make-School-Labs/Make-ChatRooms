@@ -37,6 +37,8 @@ class CreateUserView: UIView {
     @IBAction func joinChatRoomButton(_ sender: Any) {
         guard let username = userNameTextField.text else {return}
         let user = User(username: username, activeRooms: nil)
+        SharedUser.shared.user = user
+
         ChatRoom.shared.user = user
         ChatRoom.shared.sendNickname()
     }

@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Rooms {
-    static var shared = Rooms()
-    var rooms = [Room]()
+class SharedUser {
+    static var shared = SharedUser()
+    var user: User?
 }
