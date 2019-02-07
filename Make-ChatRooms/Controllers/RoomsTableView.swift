@@ -10,11 +10,7 @@ import UIKit
 
 
 class RoomsTableView: UITableViewController {
-//    static var shared = RoomsTableView()
-//
-//    var activeRooms: [Room] = [Room]()
-////    let chatRoom = ChatRoom()
-    
+
     //     MARK TODO: Can these uielements be extracted to a helper file?
     lazy var createRoomButton: UIBarButtonItem = {
         let createJoinRoomButton = UIBarButtonItem(title: "Create Room", style: .plain, target: self, action: #selector(createRoom(sender:)))
@@ -58,16 +54,16 @@ class RoomsTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let chatRoomViewController = ChatRoomViewController()
-        print("Stop before execution")
         chatRoomViewController.roomName = SharedUser.shared.user?.activeRooms?[indexPath.row].roomName ?? "Empty Room"
         self.navigationController?.pushViewController(chatRoomViewController, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell", for: indexPath) as! RoomTableViewCell
-//        cell.textLabel?.text = RoomsTableView.shared.activeRooms[indexPath.row].roomName
+        
         if let user = SharedUser.shared.user {
             cell.textLabel?.text = user.activeRooms?[indexPath.row].roomName
+            cell.detailTextLabel?.text = "Test Text"
         }
         return cell
     }

@@ -18,16 +18,11 @@ class ChatRoom: NSObject {
     weak var delegate: ChatRoomDelegate?
     weak var usernameDelegate: UsernameDelegate?
     weak var roomTransitionDelegate: RoomTransition?
-    
-    //    func sendSocketNickname(user: User) {
-    //        print("USER SENT THROUGH DELEGATE \(user)")
-    //    }
+
     
     static let manager = SocketManager(socketURL: URL(string: "http://localhost:4000/")!, config: [.log(true), .compress])
     private var socket = manager.defaultSocket // Singleton instance  one socket connection per phone
-    
-    //    static var roomName = ""
-    
+        
     override init() {
         super.init()
         socket.connect() // When you instantiate the chat room the socket connects to the server
