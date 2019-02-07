@@ -72,7 +72,7 @@ class ChatRoom: NSObject {
         guard let jsonData = try? JSONEncoder().encode(message) else {return} // Have to encode because message object isnt a native json object
         
         
-        self.socket.emit("chat message", with: [jsonData, message.roomOriginName])
+        self.socket.emit("chat message", jsonData)
     }
     
     func joinRoom() {
