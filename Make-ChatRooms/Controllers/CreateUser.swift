@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CreateUser: UIViewController, RoomTransition, UsernameDelegate {
+class CreateUser: UIViewController, UsernameDelegate, RoomTransition {
      let chatRoom = ChatRoom()
     
     func usernameCollision() {
@@ -22,18 +22,18 @@ class CreateUser: UIViewController, RoomTransition, UsernameDelegate {
    
     func transitionToRoom() {
         let roomTableView = RoomsTableView()
-        
-//        self.navigationController?.pushViewController(roomTableView, animated: true)
+
+        self.navigationController?.pushViewController(roomTableView, animated: true)
         print("Transitioning to room")
     }
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let createUserView = CreateUserView()
         createUserView.frame = self.view.bounds
+        chatRoom.roomTransitionDelegate = self
         self.view.addSubview(createUserView)
-        createUserView.delegate = self
         chatRoom.usernameDelegate = self
     }
 }

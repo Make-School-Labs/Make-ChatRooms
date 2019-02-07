@@ -13,8 +13,11 @@ class ChatRoom: NSObject {
     static var shared = ChatRoom()
     var user: User?
     var room: Room?
-    var delegate: ChatRoomDelegate?
-    var usernameDelegate: UsernameDelegate?
+    
+    // DELEGATES making all delegates weak to avoid a retain cycle
+    weak var delegate: ChatRoomDelegate?
+    weak var usernameDelegate: UsernameDelegate?
+    weak var roomTransitionDelegate: RoomTransition?
     
     //    func sendSocketNickname(user: User) {
     //        print("USER SENT THROUGH DELEGATE \(user)")
@@ -51,6 +54,11 @@ class ChatRoom: NSObject {
         socket.on("usernameCollision") { (data, ack) in
             self.usernameDelegate?.usernameCollision()
             
+        }
+        
+        socket.on("validUsername") { (data, ack) in
+            print("Username has chosen a valid username")
+            self.roomTransitionDelegate?.transitionToRoom()
         }
     }
     

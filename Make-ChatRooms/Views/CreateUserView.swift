@@ -11,9 +11,7 @@ import UIKit
 
 class CreateUserView: UIView {
     // View belonging to when the user signs up
-//    let chatRoom = ChatRoom()
-    weak var delegate: RoomTransition?
-    
+//    let chatRoom = ChatRoom()    
     @IBOutlet weak var userInfoView:UIView!
     //@IBOutlet var createUserView: UIView!
     @IBOutlet weak var makeSchoolLogoImageView: UIImageView!
@@ -41,7 +39,6 @@ class CreateUserView: UIView {
         let user = User(username: username, activeRooms: nil)
         ChatRoom.shared.user = user
         ChatRoom.shared.sendNickname()
-        delegate?.transitionToRoom()
     }
     
     private func configureImageView() {
