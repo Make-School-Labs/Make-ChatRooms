@@ -10,10 +10,10 @@ import UIKit
 
 
 class RoomsTableView: UITableViewController {
-    static var shared = RoomsTableView()
-    
-    var activeRooms: [Room] = [Room]()
-//    let chatRoom = ChatRoom()
+//    static var shared = RoomsTableView()
+//
+//    var activeRooms: [Room] = [Room]()
+////    let chatRoom = ChatRoom()
     
     //     MARK TODO: Can these uielements be extracted to a helper file?
     lazy var createRoomButton: UIBarButtonItem = {
@@ -58,13 +58,17 @@ class RoomsTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let chatRoomViewController = ChatRoomViewController()
-        chatRoomViewController.roomName = RoomsTableView.shared.activeRooms[indexPath.row].roomName
+        print("Stop before execution")
+        chatRoomViewController.roomName = SharedUser.shared.user?.activeRooms?[indexPath.row].roomName ?? "Empty Room"
         self.navigationController?.pushViewController(chatRoomViewController, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell", for: indexPath) as! RoomTableViewCell
-        cell.textLabel?.text = RoomsTableView.shared.activeRooms[indexPath.row].roomName
+//        cell.textLabel?.text = RoomsTableView.shared.activeRooms[indexPath.row].roomName
+        if let user = SharedUser.shared.user {
+            cell.textLabel?.text = user.activeRooms?[indexPath.row].roomName
+        }
         return cell
     }
     
@@ -73,11 +77,12 @@ class RoomsTableView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if RoomsTableView.shared.activeRooms.count == 0 {
+        if SharedUser.shared.user?.activeRooms?.count == 0 {
             self.navigationController?.title = "No Active Rooms"
         }
         
-        return RoomsTableView.shared.activeRooms.count
+        let rooms = SharedUser.shared.user?.activeRooms ?? [Room]() // Else instantiate an empty array of active rooms
+        return rooms.count
     }
     
     @objc func createRoom(sender: UIBarButtonItem) {

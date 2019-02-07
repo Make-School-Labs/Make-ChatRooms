@@ -11,7 +11,7 @@ import SocketIO
 
 class ChatRoom: NSObject {
     static var shared = ChatRoom()
-    var user: User?
+//    var user: User?
     var room: Room?
     
     // DELEGATES making all delegates weak to avoid a retain cycle
@@ -63,7 +63,7 @@ class ChatRoom: NSObject {
     }
     
     func sendNickname() {
-        guard let username = self.user?.username else {return}
+        guard let username = SharedUser.shared.user?.username else {return}
         //        let user = User(username: username, activeRooms: nil)
         self.socket.emit("socketUsername", username)
         let userDefaults = UserDefaults()
@@ -85,7 +85,8 @@ class ChatRoom: NSObject {
 //        let chatRoom = ChatRoomViewController()
 //        chatRoom.navigationItem.title = room.roomName
         self.socket.emit("joinRoom", room.roomName) // Join pre-exisiting chat room with given name being sent to server
-        RoomsTableView.shared.activeRooms.append(room)
+        SharedUser.shared.user?.activeRooms?.append(room)
+        print(SharedUser.shared.user?.activeRooms)
     }
     
     func createRoom(roomName: String) {

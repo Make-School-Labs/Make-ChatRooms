@@ -11,7 +11,7 @@ import UIKit
 
 class CreateUserView: UIView {
     // View belonging to when the user signs up
-//    let chatRoom = ChatRoom()    
+    //    let chatRoom = ChatRoom()
     @IBOutlet weak var userInfoView:UIView!
     //@IBOutlet var createUserView: UIView!
     @IBOutlet weak var makeSchoolLogoImageView: UIImageView!
@@ -36,10 +36,9 @@ class CreateUserView: UIView {
     
     @IBAction func joinChatRoomButton(_ sender: Any) {
         guard let username = userNameTextField.text else {return}
-        let user = User(username: username, activeRooms: nil)
+        let user = User(username: username, activeRooms: [Room]())
         SharedUser.shared.user = user
-
-        ChatRoom.shared.user = user
+        
         ChatRoom.shared.sendNickname()
     }
     
