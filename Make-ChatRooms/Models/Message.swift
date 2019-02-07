@@ -35,7 +35,7 @@ class Message: Codable {
         let senderUsername = try? container?.decode(String.self, forKey: .senderUsername) ?? ""
         let messageSender = try? container?.decodeIfPresent(Bool.self, forKey: .messageSender) ?? false
         let roomOriginName = try? container?.decode(String.self, forKey: .roomOriginName)
-        self.init(messageContent: messageContent!, senderUsername: senderUsername!, messageSender: messageSender, roomOriginName: roomOriginName)
+        self.init(messageContent: messageContent as! String, senderUsername: senderUsername!, messageSender: messageSender, roomOriginName: roomOriginName as! String)
     }
 
 //    func encode(to encoder: Encoder) {
