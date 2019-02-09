@@ -77,11 +77,9 @@ class ChatRoom: NSObject {
     
     func joinRoom() {
         guard let room = self.room else {return}
-//        let chatRoom = ChatRoomViewController()
-//        chatRoom.navigationItem.title = room.roomName
+
         self.socket.emit("joinRoom", room.roomName) // Join pre-exisiting chat room with given name being sent to server
         SharedUser.shared.user?.activeRooms?.append(room)
-        print(SharedUser.shared.user?.activeRooms)
     }
     
     func createRoom(roomName: String) {
