@@ -9,13 +9,10 @@
 import Foundation
 import UIKit
 
-protocol MessageInputDelegate {
-    func sendWasTapped(message: String)
-}
-
 class MessageInputView: UIView{
+    
     // Delegate used to notify that the send message button was tapped
-    var delegate: MessageInputDelegate?
+    weak var delegate: MessageInputDelegate?
     
     // Instantiating text view responsible for typing the message
     let textView = UITextView()
@@ -24,21 +21,7 @@ class MessageInputView: UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        // Initalize layout of the the send button and the text view
-        backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1.0)
-        textView.layer.cornerRadius = 4
-        textView.layer.borderColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 0.6).cgColor
-        textView.layer.borderWidth = 1
-        
-        sendButton.backgroundColor = UIColor(red: 8/255, green: 183/255, blue: 231/255, alpha: 1.0)
-        sendButton.layer.cornerRadius = 4
-        sendButton.setTitle("Send", for: .normal)
-        sendButton.isEnabled = true
-        
-        sendButton.addTarget(self, action: #selector(MessageInputView.sendTapped), for: .touchUpInside)
-        
-        addSubview(textView)
-        addSubview(sendButton)
+       configureViews()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -46,11 +29,8 @@ class MessageInputView: UIView{
     }
     
     
-    @objc func sendTapped() { // Reset the text view when the sender triggers the protocol function
-//        if let delegate = delegate, let message = textView.text {
-//            delegate.sendWasTapped(message: message)
-//            textView.text = "" // Reset text view contents to "" string
-//        }
+    @objc func sendTapped() {
+        // Reset the text view when the sender triggers the protocol function
         guard let messsage = textView.text else {return}
         textView.text = ""
         
@@ -67,6 +47,25 @@ class MessageInputView: UIView{
         textView.center = CGPoint(x: textView.bounds.size.width/2.0 + 16, y: bounds.size.height/2.0)
         sendButton.center = CGPoint(x: bounds.size.width - 30 - 16, y: bounds.size.height/2.0)
         
+    }
+    
+    func configureViews() {
+        
+        // Initalize layout of the the send button and the text view
+        backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1.0)
+        textView.layer.cornerRadius = 4
+        textView.layer.borderColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 0.6).cgColor
+        textView.layer.borderWidth = 1
+        
+        sendButton.backgroundColor = UIColor(red: 8/255, green: 183/255, blue: 231/255, alpha: 1.0)
+        sendButton.layer.cornerRadius = 4
+        sendButton.setTitle("Send", for: .normal)
+        sendButton.isEnabled = true
+        
+        sendButton.addTarget(self, action: #selector(MessageInputView.sendTapped), for: .touchUpInside)
+        
+        addSubview(textView)
+        addSubview(sendButton)
     }
 }
 

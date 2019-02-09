@@ -15,11 +15,11 @@ protocol RoomTransition: class {
 protocol ChatRoomDelegate: class {
     func recievedMessage(message: Message)
 }
-//
-//protocol MessageSender: class {
-//    func passMessageSender()
-//}
 
 protocol UsernameDelegate: class {
     func usernameCollision()
+}
+
+protocol MessageInputDelegate: class {
+    func sendWasTapped(message: String)
 }
