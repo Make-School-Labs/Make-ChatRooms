@@ -12,10 +12,7 @@ import UIKit
 extension ChatRoomViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
-        
-        loadViews()
+        loadViews() // Layout for how the messages and c hat interface should look!
     }
     func keyboardWillChange(notification: NSNotification) {
         if let userInfo = notification.userInfo {
@@ -30,7 +27,6 @@ extension ChatRoomViewController {
         }
     }
     func loadViews() {
-//        navigationItem.title = "Let's Chat!"
         navigationItem.backBarButtonItem?.title = "Run!"
         
         view.backgroundColor = UIColor(red: 24/255, green: 180/255, blue: 128/255, alpha: 1.0)
@@ -57,9 +53,10 @@ extension MessageTableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        let messageSender = true
+        
         if isJoinMessage() {
             layoutForJoinMessage()
+            
         } else {
             messageContentLabel.font = UIFont(name: "Helvetica", size: 17) //UIFont.systemFont(ofSize: 17)
             messageContentLabel.textColor = .white
@@ -68,6 +65,7 @@ extension MessageTableViewCell {
             messageContentLabel.frame = CGRect(x: 0, y: 0, width: size.width + 32, height: size.height + 16)
             
             
+            // If the user is the one who initiated the message that is being sent currently
             if self.message?.messageSender == true {
                 nameLabel.isHidden = true
                 

@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 extension ChatRoomViewController: UITableViewDataSource, UITableViewDelegate {
+    // Extension of the ChatRoomView Controller to configure Table View
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = MessageTableViewCell(style: .default, reuseIdentifier: "MessageCell") 
         cell.selectionStyle = .none

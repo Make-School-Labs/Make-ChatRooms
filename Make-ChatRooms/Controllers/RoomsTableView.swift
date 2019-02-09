@@ -26,6 +26,7 @@ class RoomsTableView: UITableViewController {
         self.navigationItem.title = "Active Rooms"
         tableView.delegate = self
         tableView.dataSource = self
+        self.navigationItem.hidesBackButton = true
         self.navigationItem.rightBarButtonItem = createRoomButton
         tableView.register(RoomTableViewCell.self, forCellReuseIdentifier: "RoomTableViewCell")
         

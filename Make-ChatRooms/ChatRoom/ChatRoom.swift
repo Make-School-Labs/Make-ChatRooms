@@ -11,18 +11,18 @@ import SocketIO
 
 class ChatRoom: NSObject {
     static var shared = ChatRoom()
-//    var user: User?
+    //    var user: User?
     var room: Room?
     
     // DELEGATES making all delegates weak to avoid a retain cycle
     weak var delegate: ChatRoomDelegate?
     weak var usernameDelegate: UsernameDelegate?
     weak var roomTransitionDelegate: RoomTransition?
-
     
+    // MARK: TODO MAKE PORT THEIR RUNNING DYNAMIC ... LET THEM KNOW
     static let manager = SocketManager(socketURL: URL(string: "http://localhost:4000/")!, config: [.log(true), .compress])
     private var socket = manager.defaultSocket // Singleton instance  one socket connection per phone
-        
+    
     override init() {
         super.init()
         socket.connect() // When you instantiate the chat room the socket connects to the server
@@ -59,14 +59,12 @@ class ChatRoom: NSObject {
     
     func sendNickname() {
         guard let username = SharedUser.shared.user?.username else {return}
-        //        let user = User(username: username, activeRooms: nil)
         self.socket.emit("socketUsername", username)
         let userDefaults = UserDefaults()
-        userDefaults.set(username, forKey: "username")
+        userDefaults.set(username, forKey: "username") // Save username so that we can access it throughout the application
     }
     
     
-    // Is goingt now take in a message object
     func sendMessage(message: Message) { // Has to conect first so triggering message isn't the first thing that occurs
         
         guard let jsonData = try? JSONEncoder().encode(message) else {return} // Have to encode because message object isnt a native json object
@@ -77,14 +75,16 @@ class ChatRoom: NSObject {
     
     func joinRoom() {
         guard let room = self.room else {return}
-
+        
         self.socket.emit("joinRoom", room.roomName) // Join pre-exisiting chat room with given name being sent to server
         SharedUser.shared.user?.activeRooms?.append(room)
     }
     
+    
     func createRoom(roomName: String) {
         self.socket.emit("createRoom", roomName) // Create room and send to the server the given name
     }
+    
     
     func leaveRoom(roomName:String) {
         self.socket.emit("leaveRoom", roomName) // Leave the specified room that the user is in
