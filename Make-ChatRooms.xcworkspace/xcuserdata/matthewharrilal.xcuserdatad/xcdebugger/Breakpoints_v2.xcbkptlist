@@ -25,13 +25,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Make-ChatRooms/ChatRoom/ChatRoom.swift"
-            timestampString = "571732539.87199"
+            filePath = "Make-ChatRooms/Controllers/ChatRoomViewController.swift"
+            timestampString = "571734580.7382309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "emittedEvents()"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "sendWasTapped(message:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Make-ChatRooms/Controllers/ChatRoomViewController.swift"
+            timestampString = "571734580.738615"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "recievedMessage(message:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Make-ChatRooms/ChatRoom/ChatRoom.swift"
+            timestampString = "571734580.7388591"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "sendMessage(message:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

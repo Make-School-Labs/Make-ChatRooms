@@ -34,9 +34,9 @@ class Message: Codable {
         let messageContent = try? container?.decode(String.self, forKey: .messageContent) ?? ""
         let senderUsername = try? container?.decode(String.self, forKey: .senderUsername) ?? ""
         let messageSender = try? container?.decodeIfPresent(Bool.self, forKey: .messageSender) ?? false
-        let roomOriginName = try? container?.decode(String.self, forKey: .roomOriginName)
+        let roomOriginName = try? container?.decode(String.self, forKey: .roomOriginName) ?? ""
         
         // Force unwrapping may prove to hurt in the future, let's see how we can safely unwrap these values!
-        self.init(messageContent: String(describing: messageContent), senderUsername: String(describing: senderUsername), messageSender: messageSender, roomOriginName: String(describing: roomOriginName))
+        self.init(messageContent: messageContent ?? "", senderUsername: senderUsername ?? "", messageSender: messageSender, roomOriginName: roomOriginName ?? "")
     }
 }
