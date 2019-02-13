@@ -35,12 +35,8 @@ class Message: Codable {
         let senderUsername = try? container?.decode(String.self, forKey: .senderUsername) ?? ""
         let messageSender = try? container?.decodeIfPresent(Bool.self, forKey: .messageSender) ?? false
         let roomOriginName = try? container?.decode(String.self, forKey: .roomOriginName)
+        
+        // Force unwrapping may prove to hurt in the future, let's see how we can safely unwrap these values!
         self.init(messageContent: messageContent as! String, senderUsername: senderUsername!, messageSender: messageSender, roomOriginName: roomOriginName as! String)
     }
-
-//    func encode(to encoder: Encoder) {
-//        var container = encoder.container(keyedBy: CodingKeys.self)
-//        let messageContent = container.encode(String.self, forKey: .messageContent)
-//
-//    }
 }
