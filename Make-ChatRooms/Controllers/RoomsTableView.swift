@@ -8,6 +8,7 @@
 
 import UIKit
 
+class ConfigureCell: UITableViewCell {}
 
 class RoomsTableView: UITableViewController {
 
@@ -30,7 +31,7 @@ class RoomsTableView: UITableViewController {
         // MARK: TODO Is this the best way of disabling the user to not join the chat as a different user on the same device?
         self.navigationItem.hidesBackButton = true
         self.navigationItem.rightBarButtonItem = createRoomButton
-        tableView.register(RoomTableViewCell.self, forCellReuseIdentifier: "RoomTableViewCell")
+        tableView.register(ConfigureCell.self, forCellReuseIdentifier: "RoomTableViewCell")
         
     }
     
