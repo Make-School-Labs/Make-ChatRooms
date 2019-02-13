@@ -24,7 +24,6 @@ class MessageTableViewCell: UITableViewCell {
     var message: Message?
     
     func apply(message: Message) { // When applying a message to the cell update below information
-        print("Value of Message Sender \(message.messageSender)")
         self.message = message
         nameLabel.text = message.senderUsername
         messageContentLabel.text = message.messageContent

@@ -26,6 +26,8 @@ class RoomsTableView: UITableViewController {
         self.navigationItem.title = "Active Rooms"
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // MARK: TODO Is this the best way of disabling the user to not join the chat as a different user on the same device?
         self.navigationItem.hidesBackButton = true
         self.navigationItem.rightBarButtonItem = createRoomButton
         tableView.register(RoomTableViewCell.self, forCellReuseIdentifier: "RoomTableViewCell")
@@ -60,7 +62,7 @@ class RoomsTableView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell", for: indexPath) as! RoomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell", for: indexPath)
         
         if let user = SharedUser.shared.user {
             cell.textLabel?.text = user.activeRooms?[indexPath.row].roomName

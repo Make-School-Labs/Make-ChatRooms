@@ -32,7 +32,6 @@ class ChatRoom: NSObject {
     
     func emittedEvents() {
         socket.on(clientEvent: .connect) {data, ack in
-            print(data)
             print("socket connected")
         }
         
