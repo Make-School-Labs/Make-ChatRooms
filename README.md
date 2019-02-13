@@ -1,3 +1,4 @@
+## Folder Structure and Starter Kit
 
 **Assets folder** ~ Composed of any image files associated with the application such as the Make School Logo on the front of the application
 #####
