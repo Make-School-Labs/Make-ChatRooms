@@ -14,6 +14,8 @@ extension ChatRoomViewController {
         super.viewDidLoad()
         loadViews() // Layout for how the messages and c hat interface should look!
     }
+    
+    
     func keyboardWillChange(notification: NSNotification) {
         if let userInfo = notification.userInfo {
             let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)!.cgRectValue
@@ -26,6 +28,8 @@ extension ChatRoomViewController {
             }
         }
     }
+    
+    // Upon view did loading configure views to be connected and added as subviews
     func loadViews() {
         navigationItem.backBarButtonItem?.title = "Run!"
         
@@ -40,6 +44,7 @@ extension ChatRoomViewController {
         
         messageInputBar.delegate = self 
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         let messageBarHeight:CGFloat = 60.0

@@ -31,6 +31,7 @@ class ChatRoom: NSObject {
     
     
     func emittedEvents() {
+        // Listening for a notification from the server for the corresponding events
         socket.on(clientEvent: .connect) {data, ack in
             print("socket connected")
         }
@@ -51,16 +52,20 @@ class ChatRoom: NSObject {
         }
         
         socket.on("validUsername") { (data, ack) in
+            
+            // Upon a successful username trigger a transtion to the list of active rooms user is currently in
             print("Username has chosen a valid username")
+            let username = data[0]
+            let userDefaults = UserDefaults()
+            userDefaults.set("socketUsername", forKey: String(describing: username)) // Safely cast username as string
             self.roomTransitionDelegate?.transitionToRoom()
         }
     }
     
     func sendNickname() {
+        // Have to only save the username upon valid username
         guard let username = SharedUser.shared.user?.username else {return}
         self.socket.emit("socketUsername", username)
-        let userDefaults = UserDefaults()
-        userDefaults.set(username, forKey: "username") // Save username so that we can access it throughout the application
     }
     
     
