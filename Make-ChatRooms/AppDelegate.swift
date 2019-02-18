@@ -21,9 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let roomsViewController = RoomsCollectionViewController()
         
-        window?.rootViewController = UINavigationController(rootViewController: roomsViewController)
+        let createUserVC = CreateUser()
+        
+        window?.rootViewController = UINavigationController(rootViewController: createUserVC)
         return true
     }
 
